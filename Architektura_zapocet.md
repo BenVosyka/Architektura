@@ -282,7 +282,7 @@
 
 **Otázka 61: Co je GPU a k čemu slouží?**
 
-> *Odpověď:*
+> *Odpověď:* GPU (Graphics Processing Unit) je grafický procesor specializovaný na paralelní zpracování grafických a matematických výpočtů. Slouží k vykreslování 2D/3D grafiky, akceleraci videa a podporuje technologie jako OpenGL a DirectX. Moderní GPU se využívají i pro obecné paralelní výpočty (CUDA), umělou inteligenci, hluboké neuronové sítě, kódování/dekódování videa, šifrování a kryptografii. Existují i specializované výpočetní karty (např. nVidia Tesla).
 
 **Otázka 62: Jaký je rozdíl mezi integrovanou a dedikovanou grafikou?**
 
@@ -290,15 +290,15 @@
 
 **Otázka 63: Co je RAMDAC?**
 
-> *Odpověď:*
+> *Odpověď:* RAMDAC je kombinace tří D/A (Digital-to-Analog) převodníků (pro každou RGB složku jeden) a malé SRAM paměti pro uložení barevné mapy. Slouží k převodu digitálního videosignálu na analogový pro CRT monitory, starší LCD a dataprojektory. Rychlost se udává v MHz a ovlivňuje maximální zobrazovací frekvenci při daném rozlišení. U dnešních LCD panelů není konverze nutná, protože pracují přímo s digitálním signálem.
 
 **Otázka 64: Jaké jsou hlavní typy video výstupů?**
 
-> *Odpověď:*
+> *Odpověď:* **D-Sub (VGA)** – starší analogový výstup, 15-pinový konektor, signál převáděn přes RAMDAC, náchylný na rušení. **DVI** – digitální rozhraní; DVI-D (pouze digitální), DVI-I (digitální + analogový); Single link (4 páry kroucené dvoulinky, 24 bitů/pixel) a Dual link (rezervní linka pro vyšší rozlišení/frekvenci). **HDMI** – přenos nekomprimovaného obrazu (i 3D od verze 1.4) + až 8kanálový digitální zvuk, podpora HDCP; typy A (19 pinů, kompatibilní s DVI-D single), B (29 pinů, dual link), C (mini). **DisplayPort** – vysokorychlostní digitální rozhraní, existuje i varianta mini DisplayPort pro přenosné počítače.
 
 **Otázka 65: Co je Multi-GPU (SLI, CrossFireX)?**
 
-> *Odpověď:*
+> *Odpověď:* Multi-GPU je technologie propojení více grafických karet pro zvýšení grafického výkonu. Obraz se rozdělí mezi karty (2 karty = polovina obrazu, 4 karty = kvadranty). Funguje výhradně na PCI Express (ne AGP). **SLI** (nVidia) – propojení stejných modelů karet SLI můstkem; pomalejší karta určuje výkon všech. **CrossFireX** (AMD/ATI) – propojení až 4 GPU, umožňuje kombinaci různých verzí GPU v rámci jedné série. GPU navíc podporují technologii **PhysX** (výpočty fyzikálního modelu – kolize, kapaliny, stíny) v různých módech.
 
 ---
 
