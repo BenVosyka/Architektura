@@ -6,15 +6,15 @@
 
 **Otázka 1: Co je základní myšlenka Von Neumannovy architektury?**
 
-> *Odpověď:*
+> *Odpověď:* Základní principy stanovené Johnem von Neumannem (1945): 1) Počítač používá dvojkovou soustavu. 2) Je řízen centrem (procesor), které vykonává příkazy dle programu. 3) Program i data musí být uloženy v paměti počítače. 4) Počítač je univerzální – vykonává různé úkoly pomocí speciálních programů. Schéma: VSTUP → PAMĚŤ ↔ PROCESOR (ALU + Řadič) → VÝSTUP.
 
 **Otázka 2: Jaké jsou hlavní součásti CPU podle Von Neumanna?**
 
-> *Odpověď:*
+> *Odpověď:* Podle Von Neumannova schématu se procesor skládá z: **ALU (Aritmeticko-logická jednotka)** – vybírá z paměti příkazy programu a vykonává je, pracuje s daty z paměti a zapisuje výsledky zpět; **Řadič** – koordinuje činnost celého systému. Dále procesor spolupracuje s pamětí a vstupně-výstupními zařízeními.
 
 **Otázka 3: Jaký je hlavní rozdíl mezi Von Neumannovou a Harvardskou architekturou?**
 
-> *Odpověď:*
+> *Odpověď:* Von Neumannova architektura má společnou paměť pro program i data (program a data sdílejí stejný paměťový prostor). Harvardská architektura má oddělené paměti pro program a pro data, což umožňuje současný přístup k instrukcím i datům a tím vyšší rychlost zpracování.
 
 **Otázka 4: Co umožňuje 64-bitový systém oproti 32-bitovému?**
 
