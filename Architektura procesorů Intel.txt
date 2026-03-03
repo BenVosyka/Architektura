@@ -1,648 +1,0 @@
-Vývoj architektury procesoru
-
-Úvod do problematiky
-• Architektura = stavba procesoru, tedy obvody
-uvnitř procesoru podporující nové technologie.
-- zvýšení výkonu při zpracování instrukcí a dat
-- snížení spotřeby elektrické energie
-• Základní obvody architektury procesoru
-- řadič procesoru
-- výpočetní jednotka (ALU)
-- paměťové registry (adresové, instrukční, datové)
-
-Vývoj architektury procesorů INTEL
-• Skalární architektura
-(8088, 8086, 80286, 80386, 80486)
-• Superskalární architektura
-(Pentium, Pentium Pro, Pentium MMX, Pentium II a III, Celeron)
-• NetBurst
-(Pentium 4, Pentium D, Xeon)
-• Core
-(Core Duo, Core 2 Duo, Core 2 Extreme, Core 2 Quad, Celeron)
-• Atom
-(optimalizována na co nejnižší spotřebu elektrické energie)
-• Nehalem
-(řada procesorů Core i7, Core i5, Core i3)
-• Sandy Bridge (Ivy Bridge)
-(2. generace procesorů řady Core i7, Core i5, Core i3)
-
-Vývoj architektury procesorů INTEL
-• Haswell (Broadwell)
-• SkyLake
-• Kaby Lake
-• Coffee Lake
-• Ice Lake
-• Tiger Lake
-
-Vývoj architektury procesorů AMD
-•
-•
-•
-•
-
-Am286, Am386, Am486
-K5
-K6, AMD K6-II, K6-III
-K7
-(Athlon, Athlon XP, Athlon MP + Duron, Sempron)
-• K8
-(Athlon 64, athlon 64 X2, Turion 64, Turion 64 X2, Sempron)
-• K10
-(Phenom, Opteron)
-• K11
-(architektura vícejádrových APU s označením „Buldozer“)
-
-Skalární architektura
-
-Skalární architektura CPU
-• Během 1 hodinového taktu dokáží dokončit zpracování
-pouze 1 instrukce.
-• Pipelining = zřetězené zpracování instrukci.
-Procesor je složen z více funkčních bloků, které jsou
-vzájemně propojeny (pipeline, datovod). Dokáže si tedy
-rozpracovat více instrukcí najednou.
-
-Skalární architektura CPU
-Zpracování instrukce se zjednodušeně sestává z těchto
-kroků (stupeň pipeline):
-1. výpočet adresy místa v operační paměti
-2. načtení instrukce z dané adresy v operační paměti
-3. dekódování instrukce (nalezení mikrokódu
-reprezentující instrukci v paměti ROM)
-4. provedení výpočetních operací v ALU / FPU
-5. zápis výsledku do registru
-
-Skalární architektura CPU
-Zpracovávání vždy jedné instrukce
-
-Pipelining – zřetězené zpracování instrukcí
-
-Skalární architektura CPU
-• FPU = Floating Point Unit, matematický koprocesor
-Výpočetní jednotka integrovaná přímo v jádře procesoru,
-specializující se na operace s reálnými čísly s plovoucí
-řádovou čárkou. (součást CPU - architektura 80486 a
-vyšší)
-• CACHE = velmi rychlá, statická paměť typu RAM,
-umístěná blízko jádra procesoru. Slouží k uložení části
-operační paměti (instrukce, data), se kterou procesor
-momentálně pracuje
-
-Superskalární architektura
-
-Superskalární architektura CPU
-• Paralelní pipelining
-Obsahují více prováděcích jednotek (především ALU),
-umožňují paralelní zřetězení – dokončení více instrukcí
-během jednoho hodinového taktu (pouze na sobě
-nezávislé instrukce)
-• Předvídání (predikce) skoku v programu
-• Vyrovnávací paměť CACHE
-L1 (instrukční, datová)
-L2 (urychlení komunikace mezi CPU a OP)
-
-Superskalární architektura CPU
-• SIMD (Single Instruction Multiple Data)
-Rozšíření instrukční sady o instrukce, které za určitých
-podmínek dokáží zpracovat více celých (resp. reálných)
-čísel najednou
-- Vhodné pro multimediální a matematické aplikace
-(2D/3D grafika, zvuk, video, komprese, atd.)
-- Implementace 64 bitových resp. 128 bitových registrů
-- Technologie MMX, 3DNow!, SSE, SSE2, SSE3, SSE4,
-SSE5, AVX, AltiVec, atd.
-
-Superskalární architektura CPU
-• Příklad použití SIMD instrukce
-Skalární způsob výpočtu (SISD instrukce):
-1. mikroinstrukce: 5 * 2 = 10
-2. mikroinstrukce: 5 * 3 = 15
-3. mikroinstrukce: 5 * 1 = 5
-4. mikroinstrukce: 5 * 8 = 40
-Vektorový způsob výpočtu (SIMD instrukce):
-1. mikroinstrukce: 5 * (2; 3; 1; 8) = (10; 15; 5; 40)
-
-NetBurst architektura
-
-NetBurst architektura CPU
-• Taktovací kmitočet
-Rapidní zvýšení rychlosti provádění instrukcí a výpočtů je
-zde docíleno především zvýšením taktovací frekvence
-jádra procesoru.
-- nutnost použití napájecích zdrojů s min. 400 W výkonem
-- přidán 12V napájecí konektor pro CPU
-- velká hodnota TDP ( masivní a hlučné chladiče)
-- nevhodné pro přenosné počítače
-
-NetBurst architektura CPU
-• Hyperskalární architektura
-- rozpracování až 20 instrukcí v pipeline
-- zdokonalená predikce (odhadování) skoku v programu:
-zdvojením některých jednotek zpracovává obě varianty
-kódu bez ohledu na výsledek skoku v programu,
-nepoužitou jednoduše odstraní.
-• Procesorová sběrnice FSB s technologií QPB
-- až 4 přenosy na sběrnici během 1 hodinového taktu
-
-NetBurst architektura CPU
-• Zpracování instrukcí mimo pořadí
-Řadič procesoru analyzuje program a na základě zjištěné
-závislosti mezi jednotlivými instrukcemi provede jejich
-seřazení do optimálního pořadí.
-• Rapid execution engine
-Procesor obsahuje více jednotek ALU, dvě pro jednoduché
-výpočty pracují na dvojnásobné frekvenci procesoru
-
-NetBurst architektura CPU
-• HyperThreading (HT)
-Thread (Vlákno): sekvence instrukcí, provádějících např.
-výpočet s načtenými operandy. Při zpracování vlákna nejsou
-vždy plně efektivně využity výpočetní jednotky procesoru.
-
-- Jeden procesor (procesorové jádro) pracuje jako dva
-logické (virtuální) procesory, avšak se sdílenými
-prostředky (ALU/FPU, řadič, prediktory, dekodér).
-- Dosáhne se toho duplikováním té části CPU, která
-obsahuje registry pro uchovávání stavu výpočtů.
-
-NetBurst architektura CPU
-• Intel 64
-- Rozšíření instrukční sady o instrukce pro práci s
-64 bitovými čísly.
-- Implementace 64 bitových registrů pro uložení instrukcí
-a dat.
-- Zvýšení adresového prostoru operační paměti nad rámec
-4 GB (232 = 4 GB) díky tomuto rozšíření instrukční sady
-(technologie EM64T)
-
-NetBurst architektura CPU
-• Tepelná ochrana procesoru
-Tepelný monitor
-Procesor má integrované přesné teplotní čidlo neustále
-snímající teplotu. V případě selhání chlazení obvody
-tepelné ochrany sníží taktovací kmitočet CPU, čímž sníží
-tepelné vyzařování. Aplikace běží dále, avšak pomaleji.
-http://www.youtube.com/watch?v=06MYYB9bl70
-
-V případě nárůstu teploty nad kritickou mez (kolem 135oC),
-obvody tepelné ochrany odstaví CPU od napájení.
-
-NetBurst architektura CPU
-• SpeedStep
-Úprava taktovacího kmitočtu jádra procesoru dle potřeb
-aplikace → snížení spotřeby el. energie + zahřívání
-• Další technologie
-- Virtualizační technologie
-- Rozšíření instrukční sady (SSE2 a SSE3) o nové SIMD
-instrukce pro práci s čísly (celá, reálná)
-- XD bit
-
-Core architektura
-
-Core architektura CPU
-• Více fyzických procesorových jader
-- paralelní zpracování více aplikací najednou
-- rozložení zpracování jedné aplikace na více jader
-• Podpora 64-bitových operačních systémů
-- plně 64 bitové výpočetní jednotky + registry
-
-Core architektura CPU
-• Advanced Smart Cache
-L2 cache je sdílená mezi oběma jádry procesoru. Kapacitu
-je možné dynamicky přidělovat (alokovat) pro každé jádro
-(např. je-li jedno jádro nečinné, může druhé jádro využívat
-celou kapacitu L2 cache).
-
-Core architektura CPU
-• Wide Dynamic Execution
-Během jednoho hodinového taktu lze zpracovat více
-instrukcí – implementace 4 dekodérů instrukcí.
-
-počet mikroinstrukcí
-
-Core architektura CPU
-• Slučování instrukcí (Macro Fusion)
-Dekódování dvou úzce spjatých instrukcí na jednu
-mikroinstrukci, která je vystihne obě.
-Příklad:
-Sloučení instrukce pro porovnání operandů CMP
-(compare = porovnání) a instrukce skoku v programu
-v případě splnění JMP či nesplnění JNE podmínky.
-(JMP = z angl. JUMP, tedy skok)
-
-Načtení 4 instrukcí z instrukčního
-registru.
-Každá instrukce se zpracovává
-samostatně.
-5 instrukcí = 2 hodinové takty
-
-Načtení 5 instrukcí z instrukčního
-registru.
-Sloučení 2 instrukcí → 1 dekodér
-1 mikroinstrukce reprezentuje
-2 instrukce.
-5 instrukcí = 1 hodinový takt
-
-Core architektura CPU
-• Slučování mikroinstrukcí (MicroOps Fusion)
-Sloučení dvou mikroinstrukcí, které jsou těsně spjaty do
-jedné.
-Příklad:
-adresace místa v operační paměti + uložení čísla na toto
-místo.
-
-Core architektura CPU
-• Správa napájení částí procesoru
-- řízení otáček ventilátoru v závislosti na zatížení CPU
-- odpojení od napájení nepoužívaných obvodů CPU
-• Rozšíření instrukční sady
-- nové SIMD instrukce pro práci se 128 bitovými čísly
-- registry pro uložení 128 bitového čísla
-
-Nehalem architektura
-
-Nehalem architektura CPU
-• Více fyzických procesorových jader
-- typicky 2 jádra (i3), 4 jádra (i5, i7), 6 jader (Xeon)
-• QPI procesorová sběrnice
-
-Severní most (MCH)
-
-Nehalem architektura CPU
-• Integrace obvodů severního mostu do CPU
-- integrace řadiče OP (DDR 3)
-- integrace řadiče OP + řadiče grafické sběrnice (PCI-E x16)
-- integrace řadiče OP + GPU (oddělený čip od CPU)
-
-Nehalem architektura CPU
-• L3 Cache paměť
-- oddělená L2 cache = 256 kB
-- sdílená L3 cache = 8 MB, 4 MB
-• HyperThreading
-• Vícekanálový řadič operační paměti
-- procesory řady i7: 3 kanálový (tripple channel)
-- procesory řady i3, i5: 2 kanálový (dual channel)
-
-Nehalem architektura CPU
-• TurboBoost
-- obvody sledují vytížení jednotlivých jader CPU
-- pokud je jádro neaktivní, dojde k jejich odpojení od napájení
-- sníží se spotřeba elektrické energie a tím také TDP CPU
-- následně se přetaktují aktivní jádra CPU změnou násobitele
-frekvence
-
-Nehalem architektura CPU
-• TurboBoost
-
-Sandy Bridge architektura
-
-Sandy Bridge architektura CPU
-• Plná integrace severního mostu do CPU (Core i7, i5, i3)
-- integrace jader CPU + řadič OP + rozhraní grafické
-sběrnice PCI-Express (s podporou Multi-GPU) + GPU
-na jednom polovodičovém čipu
-
-Sandy Bridge architektura CPU
-• Grafický procesor (GPU) v CPU
-- Intel HD Graphics 2000 (resp. 3000)
-- součást polovodičového čipu procesoru
-- přímý přístup do paměti L3 cache
-- možnost změny frekvence a výkonu
-dle potřeby programové aplikace
-- vlastní napájení, možnost vypnutí
-Sandy Brigde
-Nehalem
-
-Sandy Bridge architektura CPU
-• System Agent
-- Jedná se v podstatě o obvody severního mostu:
-• řadič operační paměti DDR3
-• řadič sběrnice PCI-Express x16 verze 2.0
-(lze rozdělit na dvě linky x8), podpora Multi-GPU
-• PCU (Power Control Unit) = obvod řízení napájení,
-frekvence a tepelného monitoringu procesoru
-• Media Engine
-- obvod pro dekódování videa a převod do jiných formátů
-
-Sandy Bridge architektura CPU
-• Oddělené napájení CPU, GPU, System Agent (SA)
-- vlastní napájení a kmitočet
-- efektivnější řízení spotřeby
-- nižší tepelné vyzařování
-- delší čas práce na akumulátory
-- širší možnosti přetaktování
-
-Sandy Bridge architektura CPU
-• Vnitřní kruhová sběrnice (ring bus)
-- Přímé propojení jader CPU, GPU
-a obvodů SA pomocí kruhové
-sběrnice (ring bus)
-- CPU, GPU i obvody SA sdílejí
-L3 Cache
-(LLC = Last Level Cache)
-- velká přenosová rychlost
-
-Sandy Bridge architektura CPU
-• Turbo Boost 2.0
-- není implementováno u CPU řady Core i3
-- obvod PCU (Power Control Unit) dokáže krátkodobě
-přetaktovat procesor nad rámec maximální hodnoty TDP
-(např. při spouštění programu, náročný výpočet).
-Poté klesne na základní frekvenci s maximálním Turbo
-násobičem  urychlení startu náročných programů,
-urychlení výpočtu, apod.
-- Myšlenka: chladič má určitou setrvačnost při zahřívání
-
-Sandy Bridge architektura CPU
-• Rozšíření instrukční sady (AVX)
-AVX = Advanced Vector Extension
-- implementace nových 256 bitových registrů
-- instrukce pracují s 256 bitovými operandy v 1 taktu
-- využití v náročných matematických aplikacích u výpočtů s
-čísly v plovoucí řádové čárce, u šifrovacích algoritmů, atd.
-
-Haswell
-• Haswell je kódové označení pro čtvrtou generaci
-mikroprocesorů vyvíjenou Intelem jako nástupce
-mikroarchitektury Ivy Bridge.
-• Mikroprocesory používají 22 nm proces
-• Navržena především pro optimalizaci úspory
-energie a zisku výkonu
-• Přechod na nerovinné (prostorové laicky "3D"),
-navíc 22-nanometrové, FinFET tranzistory, které
-byly Intelem poprvé použity u předcházející
-generace procesorů Ivy Bridge.
-
-Haswell
-• Srovnání s Ivy Bridge:
-
-– Přibližně o 8% lepší výkon ve vektorových operacích
-– Až o 5% rychlejší jednojádrový výkon
-– 6% nárůst výkonu v multithreadingu
-– Celkový výkon vzrostl cca o 3 %
-– Spotřeba desktopových procesorů Haswell oproti Ivy
-Bridge stoupl o 8 až 23%.
-– Při plné zátěži je teplota o přibližně 15 °C vyšší,
-zatímco je možné dosáhnout frekvencí až 4,6 GHz
-
-Haswell
-• Širší jádro - čtvrtá aritmetická jednotka a
-třetí AGU jednotka, druhá jednotka pro
-provádí rozvětvených programů, větší
-vyrovnávací paměť, větší přenosová
-rychlost mezipaměti, zlepšené ovládání
-paměti
-• Nové instrukce - HNI, podporuje Advanced
-Vector Extrensions 2 (AVX2), gather,
-BMI1, BMI2, ABM a FMA3
-
-Broadwell
-• Pátá generace mikroprocesorů vyvíjených
-společností Intel.
-• Je zmenšením architektury Haswell
-• Využívá 14-nanometrovou výrobní
-technologii.
-• Procesory Broadwell však plně
-nenahradily procesory Haswell, protože
-nenabízí žádné low-endové desktopové
-procesory
-
-Broadwell
-
-SkyLake
-• Šestá generace mikroarchitektur
-vyvíjených společností Intel
-• Procesory využívají 14-nanometrový
-výrobní proces, stejně jako předcházející
-procesory architektury Broadwell.
-• Lepší výkon procesoru a grafického jádra,
-zatímco spotřeba elektřina se snižuje
-• Oficiálně podporuje tato architektura
-DDR3 i DDR4 paměti
-
-SkyLake
-• Skylake přináší také změny do instrukční
-sady, konkrétně rozšíření Intel MPX a Intel
-SGX, oba pro ochranu paměti.
-• Varianty Xeonu disponují rozšířením
-Advanced Vector Extensions 3.2 (AVX512F).
-• Na rozdíl od Haswellu nemají procesory
-Skylake integrovanou kontrolu napětí.
-
-SkyLake
-
-Kaby Lake
-• Sedmá generace mikroarchitektur
-společnosti Intel
-• Obě architektury mají stejná jádra a stejný
-výkon na jeden MHz taktu. Základní takt
-však byl zvýšen, u některých modelů až o
-300 MHz. Také změny taktu (např. při
-přechodu z klidového stavu do zátěže)
-jsou rychlejší.
-
-Kaby Lake
-• Plná hardwarová podpora HEVC/VP9
-dékodování, včetně 4K videí při snímkové
-frekvenci 60 fps.
-• Také kódování těchto standardů je nyní
-implementováno hardwarově. Vybrané
-procesory získaly také vyšší takt grafického
-jádra.
-• Kaby Lake je také první architekturou typu Core
-umožňující hyper-threading u procesorů s
-označením Pentium a přetaktovávání některých
-čipů s označením i3.
-
-Kaby Lake
-
-Coffee Lake
-• 8 generace procesorů
-• Vyšší pracovní frekvence – nárůst výkonu
-15-30 %
-• 14nm++ výrobní proces
-• i3 měla 4 jádra
-• přetaktovatelnost až na 5.2Ghz
-• Podpora technologie Intel Optane
-
-Intel Optane
-• Intel Optane Memory je rychlá vyrovnávací
-(cache) paměť, do které se automaticky
-přesunou nejpoužívanější aplikace.
-• Díky tomu pak dojde k citelnému zrychlení
-odezvy operačního systému a aplikací.
-• Paměť Intel Optane má kapacitou 16 a 32
-GB.
-
-Coffee Lake
-
-Coffee Lake Refresh
-
-• 9 generace procesorů
-• 14nm++,
-• 40 PCIe linek, dvoukanálový řadič DDR42666
-• spotřebitelský procesor řady Intel Core i9, Intel Core i9-9900K s 8 jádry a 16 vlákny.
-reakcí na úspěšné procesory AMD Ryzen
-• opravy několika variant závažných
-bezpečnostních chyb (Meltdown a Spectre).
-
-Coffee Lake Refresh
-
-Značení procesorů Intel
-
-Značení procesorů Intel
-„K“ značí odemčený násobič, díky čemuž lze
-procesor ve spojení se správnou základní deskou
-přetaktovat.
-„F“ procesory nemají ve své výbavě integrovaný
-grafický čip.
-„T“ je označení pro úspornou variantu CPU se
-sníženým taktem a TDP na úrovni 35 W.
-„H“ procesor je napájený přímo na základní
-desku.
-
-Ice Lake
-• 10 generace
-• 10nm jádro Sunny Cove.
-• nejvýkonnější model Intel Core i7-1068G7
-4 fyzická a 8 logických jader s pracovní
-frekvencí v rozmezí 2,3 až 4,1 GHz s TDP
-na úrovni 28 W.
-• nová architektura pro integrovaný grafický
-čip. Intel Iris Plus (Gen11) - až 64
-jednotek s výkonem na úrovni zhruba 1
-TFLOPS
-
-Ice Lake
-• přímo integrovaný Thunderbolt 3, WiFi
-802.11ax a podpora operační paměti DDR4 s
-rychlostí až 3 733 MHz.
-• Klíčovým přínosem nové architektury Sunny
-Cove je zvýšení výkonu při stejném taktu na
-jedno jádro (IPC) o 18 % v porovnání s
-jádrem Skylake
-• 50% navýšení kapacity L1 a L2 Cache
-• více zaměřeno na SIMD instrukce, strojové
-učení, kryptografii a podobné účely
-
-Ice Lake
-
-Ice Lake – nové značení
-
-Tiger Lake
-• 11 generace, jádro Willow Cove
-• 10 nm, vylepšený 10nm proces u Tiger
-Lake - SuperFin nebo 10SF
-• 4 až 6% vylepšení výkonu na watt, rozdíl
-při přechodu z 10nm na 10SF činí
-vysokých 17,5 %.
-• Větší L2/L3 cache
-• Nové instrukce AVX-512, DL Boos pro AI
-
-Tiger Lake
-• mírně zvětšena rozteč finů 3D tranzistorů
-Fin-FET, což sice zhoršuje hustotu, ale
-tranzistory jsou pak schopny propustit více
-proudu. Ze stejného důvodu byla
-vylepšena metoda kontaktů Drain
-a Source snižující jejich odpor. Mezi
-vodiče v kovových vrstvách Intel aplikoval
-technologii tenké bariéry, která umožňuje
-zmenšit jejich odpor téměř o třetinu, což je
-výrazné překonání původní limitace.
-
-Tiger Lake
-
-Tiger Lake
-
-Rocket Lake
-• 2021 - ?
-• Rocket Lake jsou sedmou a poslední generací čipů
-vyráběných 14nm procesem. Zároveň jde ale o první
-opravdu velkou změnu oproti šest let starým procesorům
-Skylake. Přinášejí totiž zcela nová jádra
-architektury Cypress Cove, která Intel původně
-navrhoval již pro 10nm výrobu. Jenže tu ani po letech
-pořád nevyladil, takže návrh předělal pro starší proces. A
-právě díky změnám v architektuře čipu budou nové
-procesory znatelně výkonnější než předchozí generace
-Comet Lake, přestože vzejdou ze stejných výrobních
-linek.
-
-Rocket Lake
-• Nové instrukce AVX-512
-• Podpora DDR4 s 3200 MHz
-• Grafické jádro architektury Xe, podpra
-HDMI 2.0
-• Akcelerace videa AV1
-• PCI Express 4.0 – 20 linek (i pro SSD)
-
-Rocket Lake
-
-Raptor Lake-S
-• 13 generace desktopových procesorů
-• 10nm (Intel 7) proces
-• 2 x víc úsporných jader
-• Větší taktovací frekvence
-• více L3 cache
-• větší spotřeba
-
-Raptor Lake-S
-
-Raptor Lake-S
-
-Raptor Lake
-• Hybridní architektura
-• výkonná jádra + efektivní jádra
-• Výkonný jádra (P) – mají hyperthreading +
-vysoký taktovací kmitočet
-• efektivní jádra – 4 jádra zabírají stejně místa
-jako jedno výkonné
-• Označují se 8 + 8 nebo 8P + 8E, atd.
-• hardware scheduling – aby se nestalo, že
-výkonné vlákno je spuštěno na efektivním jádře
-
-Technologie Intel
-•
-•
-•
-
-•
-
-•
-
-•
-•
-
-Intel Hyper-Threading – vytváří z jednoho fyzického procesoru dva virtuální procesory
-tím, že jsou v něm aktivovány dvě řídicí jednotky. V operačním systému se jedno fyzické
-jádro procesoru prezentuje jako dvě logická jádra.
-Intel Turbo Boost 3.0 – stará se o to, že jednotlivá jádra procesorů běží rychleji, než je
-jejich základní frekvence. Dochází ke zvýšení výkonu v jedno- i vícevláknových operacích.
-Intel Optane Memory – inteligentní cache paměť, díky níž bude váš počítač vybavený
-klasickým plotnovým diskem (HDD) pracovat výrazně rychleji. Kombinuje v sobě výhody
-SSD disku a DRAM paměti – je extrémně rychlá a není volatilní, a proto v ní zůstávají
-uložená data i po ztrátě napětí.
-Intel vPro – reprezentuje mix funkcí a vlastností založených na hardwarové úrovni
-a zajišťuje lepší zabezpečení a správu počítače. Vyšší míra zabezpečení spočívá v
-šifrování dat, možnosti vzdáleného přístupu k počítači či jeho zablokování a řadě dalších
-chytrých funkcí.
-Intel Speed Shift – umožňuje velmi rychle přepínat mezi jednotlivými úspornými stavy
-procesoru. Pokud se v praxi nějaká část procesoru pro aktuální úkol nepoužívá,
-automaticky se dokáže uspat, a snížit tak výslednou spotřebu i teplotu celého procesoru.
-Intel Iris – integrovaný grafický čip, který je osazen spíše ve výkonnějších procesorech.
-Celkově je vhodný i pro občasné herní zážitky v méně náročných hrách.
-Intel UHD Graphics – integrovaný grafický čip. Jeho výkon bohatě stačí pro všechny 3D
-efekty operačního systému, 4K videa a provoz více monitorů s vysokým rozlišením.
-
-Technologie tranzistorů
-•
-
-Zatímco u planárních tranzistorů se hradla dotýkala kanálů jen z jedné
-(vrchní strany), u FinFETů už zasahovala i do obou boků. Až u RibbonFETu
-(a jeho alternativy jiných výrobců) ale hradla obklopí kanály ze všech čtyř
-stran. FinFETy skládaly kanály vedle sebe horizontálně, RibbonFETy je
-budou vrstvit nad sebou. Takové tranzistory se mohou zmenšit, takže se
-efektivněji využije plocha křemíkového waferu.
-
-
