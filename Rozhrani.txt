@@ -1,526 +1,0 @@
-Rozhraní
-Petr Františ
-
-Disková rozhraní
-• Rozhraní (řadič) disků jsou logické obvody,
-které zprostředkovávají komunikaci mezi
-pevným diskem (popř. mechanikou optických
-pamětí, floppy mechanikou, atd.) a ostatními
-částmi počítače.
-
-Disková rozhraní
-• Řadič přijímá od procesoru data a čísla stop a
-sektorů, kam má zapisovat (resp. odkud má
-data číst). Řadič disponuje určitou množinou
-signálů, pomocí kterých komunikuje s
-diskovou jednotkou.
-
-Disková rozhraní
-• Rozhraní IDE (Integrated Drive Electronics), též
-nazývané ATA (Advanced Technology), je
-standardní rozhraní zprostředkovávající
-komunikaci mezi pevným diskem a základní
-deskou.
-• Toto paralelní rozhraní sběrnicového typu je
-používáno od 80. let jako hlavní rozhraní pro
-interní připojení pevných disků, mechanik
-optických pamětí, apod.
-
-IDE - ATA
-
-ATA
-• ATA rozhraní využívá 40ti-pinového konektoru,
-na nějž se připojují ploché datové kabely.
-Původní specifikace rozhraní ATA podporovaly
-přenosové módy PIO 0 až PIO 5 (Procesor
-Input Output).
-• PIO je režim využívající procesor k řízení
-přenosů dat a dle své verze dokáže poskytnout
-propustnost 2 až 22MB/s.
-
-ATA
-• Základní desky dnešních osobních počítačů jsou
-vybaveny rozhraním nazývaným Ultra ATA které
-vzniklo z vylepšené IDE verze EIDE (Enhanced
-Integrated Drive Electronics). Dovolilo již zapojení až
-čtyř zařízení a umožnilo výrazně rychlejší přenos dat.
-– UltraATA/33 (33 MB/s)
-– UltraATA/66 (66 MB/s)
-– UltraATA/100 (100 MB/s)
-– UltraATA/133 (133 MB/s, kompatibilní s ATA-66 a ATA-100)
-
-ATA
-• Od PIO módu se zde přešlo k režimu DMA (Direct
-Memory Access – přímý vstup k paměti), díky
-kterému již disky nemusejí k přenosu dat využívat
-procesor, takže i méně zatěžují celý systém. U těchto
-rozhraní se díky výraznému zvýšení přenosových
-rychlostí objevil problém parazitní kapacitní vazby,
-kdy se signály jednotlivých datových vodičů navzájem
-ovlivňují. Řešením bylo, že původně 40ti-žilový plochý
-kabel byl doplněn o dalších 40 vodičů, které se starají
-o odrušení jednotlivých datových vodičů (stínění).
-
-PATA
-• Paralelní rozhraní typu IDE/ATA se také
-nazývají PATA (Parallel ATA) kvůli odlišení od
-nového sériového rozhraní SATA (Serial ATA).
-Nevýhodou paralelního rozhraní IDE/ATA
-zůstává nízká rychlost přenosu dat (max. 133
-MB/s), velká šířka kabelu a jeho omezená
-maximální délka na 45 cm, jakož i velikost
-konektorů se 40 vývody.
-
-PATA
-• Problémem paralelního ATA rozhraní je také
-nemožnost přistupovat k oběma diskům
-zároveň, pokud jsou připojené jako Master /
-Slave. To znamená, že vždy je nutné nejdříve
-ukončit komunikaci s jedním diskem, pak
-změnit časování (změnit režim přenosu) a
-teprve pak je možné připojit se k druhému
-disku. To trvá dlouho a není to vůbec efektivní.
-
-PATA
-
-SCSI
-• Rozhraní SCSI (Small Computer Systems Interface) je standardní
-paralelní rozhraní vyvinuté firmou Macintosh - uznávaným
-standardem se stalo poté, co je začala používat firma IBM.
-• SCSI (čti „skazi“) je vstupně/výstupní podsystém nezávislý na
-zařízení - k počítači je přes SCSI možné připojovat funkčně zcela
-rozdílná zařízení (pevné disky, páskové jednotky, CD-ROM,
-tiskárny, skenery, atd.).
-• Každé SCSI zařízení má integrovaný vlastní řadič a používá
-samostatný komunikační kanál. Vývojáři se snažili o nezávislost
-počítače na typu periferie - komunikace CPU s řadičem periferní
-jednotky pomocí standardních příkazů nezávislých na typu
-periferie.
-
-SCSI
-• V roce 2001 byla uvedena verze Ultra320 SCSI
-s přenosovou rychlostí 320 MB/s, později pak i
-Ultra640 SCSI s rychlostí dokonce 640 MB/s.
-• Mezi výhody rozhraní patří vysoká přenosová
-rychlost, možnost zapojit více zařízení bez
-omezení rychlosti.
-• K nevýhodám patří vyšší cena (i periferií),
-množství typů, komplikovanější konfigurace.
-
-SCSI
-
-Sériové rozhraní
-• Paralelní rozhraní se dostaly do stavu, kdy další
-zvyšování rychlosti bylo nemožné, především z
-důvodu parazitní kapacity a zvýšenému rušení
-mezi vodiči dalším zvyšováním taktovací
-frekvence (větší náchylnost na chyby při
-přenosu dat). Proto se přešlo k architektuře
-sériových rozhraní.
-
-SATA
-• SATA (Serial ATA) je sériové rozhraní pro HDD a
-mechaniky optických pamětí, na rozdíl od IDE/ATA
-rozhraní používajících paralelní přenos dat.
-• SATA přenese data seřazená do “paketu”
-mnohem vyšší rychlostí než u paralelního IDE/ATA
-(PATA) rozhraní díky vyššímu taktovacímu
-kmitočtu (1500MHz).
-• SATA první generace, známá též jako SATA I
-podporuje teoretický datový tok až 1,5 Gb/s.
-
-SATA
-
-SATA
-• Přenos dat rozhraním SATA potřebuje asi 20x
-méně energie (napájení 500mV) než PATA.
-• Další výhodou je podpora Hot Plug a Hot Swap.
-Ke každému disku vede jen jeden datový kabel,
-proto odpadají problémy s konfigurací. Není
-potřeba nastavovat Master/Slave. Zařízení jsou
-vždy Master.
-• Odpadají prodlevy při přepínaní mezi
-zařízeními.
-
-SATA II
-• SATA II je rozhraní SATA druhé generace. SATA II nabízí
-teoretickou přenosovou rychlost 3 Gb/s.
-
-SATA III
-• SATA III – nabízí teoretickou přenosovou
-rychlost až 6 Gb/s, kterou využijí především
-disky SSD (Solid State Drive). Jedná se o
-polovodičový pevný disk založený na
-technologii velmi rychlých flash pamětí.
-
-eSATA
-• Specifikace eSATA (External Serial ATA)
-umožňuje připojení disků a jiných zařízení přes
-SATA rozhraní externě mimo počítač. Nové
-rozhraní eSATA nabízí vyšší rychlost přenosů
-dat mezi počítačem a externím zařízením
-oproti sběrnicím USB 2.0 a FireWire.
-
-eSATA
-• Nové konektory eSATA jsou o robustnější z důvodu častějšího
-odpojování a připojování disku. Kabely jsou v zásuvce pevně uchyceny
-pomocí pružinového mechanismu, což odstraňuje problémy s
-lámáním a odpojováním za provozu. Kabel eSATA může mít délku až 2
-metry.
-
-mSATA
-• Malý slot mSATA (mini SATA) pro disky a karty s
-délkou 51 mm je používán především v
-noteboocích a ultraboocích, kde byla rozšířena
-funkčnost slotu „Mini PCI Express“ o možnost
-osazení SSD.
-• Díky tomu je možné provozovat jak klasický
-2.5" disk, tak i SSD, přestože nejsou v
-notebooku dvě 2,5" šachty. Existují také
-klasické základní desky vybavené tímto slotem.
-
-mSATA
-• Disky s rozhraním mSATA se používají nejčastěji pro
-instalaci operačního systému a často používaných
-aplikací, čímž se značně urychlí odezva počítače.
-
-SAS
-• Rozhraní SAS (Serial Attached SCSI) je sériové rozhraní
-nahrazující dřívější paralelně zapojené SCSI [čti „skazi“] rozhraní.
-Používá jak příkazy rozhraní SCSI, tak SATA. Rozhraní SAS je tedy
-kombinací vlastností SCSI a SATA rozhraní.
-• SAS rozhraní nabízí komunikaci bod-bod, což znamená, že řadič
-je s každým zařízením propojen samostatným kabelem. Oproti
-paralelnímu SCSI rozhraní nabízí vyšší přenosovou rychlost,
-podporu technologie „hot swap“ (některé implementace
-paralelního SCSI ji také podporují) a vylepšenou schopnost proti
-selhání řadiče.
-• SAS podporuje teoretické přenosové rychlosti: 1.5 Gb/s, 3 Gb/s a
-6 Gb/s (SAS 2.0).
-
-SAS
-• SAS řadiče obvykle podporují i SATA zařízení, SAS je tedy pro SATA zpětně
-kompatibilní. Opačné připojení však možné není, k řadiči SATA není možno
-připojit disk SAS. Disk SAS má konektor upravený zámkem tak, že jej není
-možné připojit ke konektoru SATA (opačnému připojení ovšem zámek nebrání).
-
-SAS
-• Narozdíl od SATA rozhraní umožňuje SAS propojit jediný
-disk ke dvěma řadičům, což zvyšuje bezpečnost u
-serverů v případě selhání řadiče.
-
-RS-232
-
-RS-232
-
-RS-232
-
-Rozhraní RS-232 nepodporuje technologii „Plug and Play“ (automatická detekce
-připojeného zařízení, včetně automatické konfigurace), ani technologii „Hot Plug“
-(připojování/odpojování zařízení za provozu). Teoretická přenosová rychlost rozhraní RS-232
-je 9600 b/s, na kratší vzdálenost až 115200 b/s.
-
-CENTRONICS (standard IEEE 1284)
-• Paralelní rozhraní CENTRONICS (LPT port) je starší rozhraní
-pro paralelní komunikaci s pomocí 17 linek, které lze rozdělit
-na 8 datových vodičů a 9 vodičů pro řízení komunikace.
-Počítač s periferií (např. tiskárna, skener) lze spolehlivě
-propojit do vzdálenosti 5 metrů.
-• Původně bylo paralelní rozhraní účelově vytvořeno pro
-komunikaci s tiskárnou, tedy jednosměrný přenos dat z
-počítače do tiskárny. Později byl standard uzpůsoben i pro
-obousměrný přenos dat rychlostí až jednotek MB/s.
-Paralelní rozhraní bylo v roce 1994 standardizován pod IEEE
-1284.
-
-LPT
-
-USB
-• USB = Universal Serial Bus (Univerzální sériová sběrnice)
-• USB je sériové rozhraní, umožňující připojit širokou
-škálu zařízení k počítači. Pomocí USB lze připojit téměř
-každou periférii - klávesnice, myši, tiskárny, skenery,
-digitální fotoaparáty či kamery, externí HDD a
-mechaniky optických pamětí, externí TV přijímače, atd.
-
-USB
-
-USB
-• V současné době existují tyto specifikace USB
-rozhraní, lišící se maximální přenosovou rychlostí:
-– 1. USB 1.1, (resp. USB 1.0) 12 Mb/s (resp. 1,5 Mb/s)
-– USB 2.0 (High-speed) - 480 Mb/s
-– USB 3.0 (Super-speed) - 4,7 Gb/s (600 MB/s)
-
-• Jednotlivé standardy jsou vzájemně kompatibilní
-(vyjma USB 3.0, viz dále), a lze tedy bez problémů
-připojovat zařízení s rozhraním USB 1.1 k HUBu USB
-2.0 a naopak. Přenosová rychlost pak odpovídá
-pomalejšímu řadiči.
-
-USB
-
-USB
-• Zařízení může být napájeno přímo z USB sběrnice (buspowered), pokud jeho proudový odběr nepřekračuje 100
-mA (tuto podmínku splňují typicky např. myši, klávesnice,
-flash disky, bluetooth adaptéry apod.).
-• Zařízení s vyšším odběrem než 100 mA (typicky např.
-externí 2.5’’ HDD) může být napájeno přímo z USB sběrnice
-také, avšak na celé USB sběrnici může být nejvýše jedno
-napájené zařízení a při nedostatku výkonových rezerv může
-systém toto zařízení odmítnout. Oficiální specifikace USB
-2.0 udává maximální odběr jednoho zařízení z USB sběrnice
-500 mA. USB 3.0 pak nabízí proudový odběr až 900 mA.
-
-USB
-• Při potřebě napájet výkonově náročnější zařízení
-(typicky např. externí 3.5’’ HDD, optické mechaniky,
-skenery, tiskárny, apod.) je nutné použít samostatné
-napájení jednotlivých zařízení nebo USB HUBů
-pomocí externích napájecích adapterů (selfpowered).
-• V případě notebooku se tímto napájením periferií
-může výrazně snižovat doba provozu na baterie, v
-řadě případů je tedy užitečné jednotlivé periferie
-napájet samostatně.
-
-USB
-• USB rozhraní používá dva typy konektorů. Plochý konektor „typ
-A“ je dnes obsažen na prakticky každém novém PC v minimálně
-2 konektorech (současné základní desky mají integrován rovnou
-USB HUB, který obsahuje až 8-10 portů přímo v PC).
-
-USB
-• Druhý konektor „typ B“ je určen pro periferní zařízení, čímž
-je zároveň definován standard propojovacího kabelu.
-
-USB
-• Rozhraní USB 3.0 využívá oproti předchozím
-specifikacím 8 vodičů. Pro vysokou přenosovou
-rychlost je nutný výkonný procesor počítače.
-• Klasické magnetické externí disky nejsou schopny
-dosáhnout teoretické přenosové rychlosti 600 MB/s
-(reálně 80-100 MB/s).
-• Konektory typu B a micro-B nejsou 100%
-kompatibilní se staršími specifikacemi. Konektory
-mají pro odlišení od starší specifikace modrou barvu.
-
-USB
-
-USB
-
-USB
-
-USB
-• Vysoká přenosová rychlost: 1.5 Mb/s, 12 Mb/s, 480 Mb/s, 4.7 Gb/s
-• 100% kompatibilita mezi specifikacemi (vyjma kabeláže a konektorů u
-specifikace USB 3.0)
-• Garantovaná komunikační vzdálenost do 5 m, u USB 3.0 se doporučuje
-max. 2.7 m
-• Možnost připojit až 127 zařízení v 7 úrovních
-• Napájecí napětí 5 V, možnost napájení periferního zařízení přímo z USB
-portu (maximální proudový odběr 100 mA, resp. 500 mA v případě
-USB 2.0. U specifikace USB 3.0 proudový odběr až 900 mA)
-• Podpora technologií „Plug and Play“ a „Hot Plug“.
-• Široká nabídka periferních zařízení
-• Přenos dat prostřednictvím USB rozhraní je řízen procesorem počítače
-
-USB C
-• Za označením USB-C (nebo úplně přesně USB
-typu C), se skrývají pouze fyzické charakteristiky
-konektoru. Má 24 pinů, tvar podobný jako
-microUSB a možnost převrátit jej při zapojování
-• za ním už se může skrývat USB 3.1, Thunderbolt
-3, ale klidně také starší USB 3.0 nebo dokonce 2.0
-• USB 3.1 Gen 1 nabídne maximum 5 Gb/s a
-nejnovější USB 3.1 Gen 2 potom dvojnásobek,
-tedy 10 Gb/s
-
-USB4
-• Představené 2019 (bez mezery v názvu)
-• Založen na konkurenčním rozhraní Intel
-Thunderbolt 3, avšak zůstává zpětně
-kompatibilní
-• Gen 2×2 nabídne propustnost 20 Gb/s (ale
-nejde o přejmenované USB 3.2 Gen 2×2).
-• Vyšší verze USB4 Gen 3×2 poběží na plných 40
-Gb/s.
-
-USB4
-• USB4 Version 2.0 je zpětně kompatibilní s předchozími
-standardy a Thunderboltem 3
-• Přes USB tak půjde i DisplayPort 2.0, který sám o sobě
-využívá propustnost až 80 Gb/s
-• USB4 Version 2.0 nicméně pro rychlost 80 Gb/s bude
-vyžadovat nové kabely typu USB-C
-• Kabely budou aktivní – s extra čipy a využijí více
-energie ze zdroje, aby po cestě udržely silný signál bez
-šumu. Takže budou i dražší. Na stávajících pasivních
-kabelech s označením USB4 bude rychlost jen 40 Gb/s.
-
-USB C
-
-USB C
-
-FireWire IEEE 1394
-• FireWire (označované jako IEEE 1394 nebo i.Link)
-je vysokorychlostní sériové rozhraní vyvinuté pro
-přenos audia, videa a dat. V současné době slouží
-především pro připojení digitálních videokamer,
-externích HDD a optických mechanik.
-• Používá se také v průmyslových aplikacích.
-Komunikaci mezi zařízeními nemusí řídit řadič
-umístěný v počítači, ale jakékoliv z připojených
-zařízení (pro přenos dat tedy není nutný počítač).
-
-FireWire
-
-FireWire
-• Přenosové rychlosti (dle specifikace) typicky 400 Mb/s, 800 Mb/s a 3200 Mb/s
-• Napájecí napětí až 30 V s maximálním příkonem pro externí zařízení 45 W na
-jeden port
-• 4, 6, 9 žilový stíněný kabel se zkroucenými páry. 4 žilový kabel neobsahuje
-napájecí vodiče
-• Podpora optických kabelů z plastovými či skleněnými optickými vlákny
-• Řízení přenosu dat mezi zařízeními provádí jedno z koncových zařízení. Zařízení
-lze propojit přímo mezi sebou bez účasti počítače (narozdíl od USB rozhraní,
-kdy je přenos dat řízen procesorem počítače).
-• V současnosti se používá především u digitálních videokamer, externích HDD či
-v průmyslových aplikacích.
-• Podpora technologií „Plug and Play“ a „Hot Plug“.
-• Maximální počet připojených zařízení je 63 (stromová struktura)
-
-BlueTooth
-• Název technologie je odvozen od přezdívky dánského
-krále Haralda II – přezdívaného Blåtand ("modrý zub",
-prý podle jeho mimořádné záliby v borůvkách a
-ostružinách), který během 10. století sjednotil
-skandinávský lid.
-• Technologie Bluetooth má také za cíl sjednotit (propojit)
-různá zařízení mezi sebou (mobilní telefon, notebook,
-hands-free, polohovací zařízení, klávesnice, atd.).
-• Jméno technologie, původně zvolené pouze dočasně,
-nakonec zůstalo.
-
-Bluetooth
-• Bluetooth je komunikační rozhraní, sloužící k
-bezdrátovému propojení mezi dvěma a více
-elektronickými zařízeními, jakými jsou například
-mobilní telefon, PDA, osobní či přenosný
-počítač, náhlavní hands-free sada, polohovací
-zařízení, klávesnice, atd.
-• Bluetooth je definován síťovým standardem IEEE
-802.15 a spadá do kategorie personálních
-počítačových sítí (PAN – Personal Area Network).
-
-Bluetooth
-
-Bluetooth
-• Bluetooth pracuje v nelicencovaném frekvenčním pásmu 2.4
-GHz (2.4 GHz až 2.483 GHz). Toto frekvenční pásmo je rozděleno
-na 79 komunikačních kanálů (1 kanál = šířka pásma 1 MHz).
-• Z důvodu zvýšení bezpečnosti při komunikaci a také zvýšení
-odolnosti vůči rušení na určité frekvenci se provádí 1600
-přeskoků (přeladění frekvence) mezi 79 kanály za 1 sekundu.
-Toto přelaďování a následná synchronizace je v režii zařízení,
-které pracuje jako master.
-• Z bezpečnostních důvodů je před prvním spojením nutné
-komunikující zařízení mezi sebou „spárovat“. Toto se provádí
-pomocí zadání identifikačního čísla (PIN) na obou zařízeních.
-
-Bluetooth
-
-Bluetooth
-• V téže lokalitě nebo jejím okolí však mohou být
-přítomna další Bluetooth zařízení, převyšující
-počet 8, případně další sítě pikonet.
-• Pro propojení více zařízení nebo pro propojení
-více samostatných pikosítí je použita struktura
-nazvaná scatternet (rozptýlená síť). V této
-struktuře jsou některá zařízení obsažena ve
-více pikosítích a zajišťují tak jejich propojení.
-
-Bluetooth
-
-Bluetooth
-• Standard Bluetooth definuje podle
-maximálního vysílacího výkonu tři třídy (Class)
-zařízení:
-• Class 1 (10 mW) - dosah cca 100 m
-• Class 2 (2,5 mW) - dosah cca 50 m
-• Class 3 (1 mW) - standardní specifikace dosah cca 10 m
-
-Bluetooth
-
-Bluetooth
-• Bluetooth 1.2 nabízí navíc podporu síťové technologie QoS (Quality Of
-Service) zajišťující co možná nejmenší zpoždění při doručování datových
-paketů především u hlasových služeb.
-• Bluetooth 2.0, 2.1 EDR (Enhanced Data Rate) používá nových typů modulací
-nosného signálu pro zvýšení přenosové rychlosti. Verze BT 2.0 nabízí až 2.1
-Mb/s, verze BT 2.1 až 3 Mb/s. Zároveň snižuje nároky na napájení zařízení.
-• Bluetooth 3.0 HS (High Speed) je zpětně kompatibilní s předchozími
-specifikacemi. Je založen na protokolu 802.11 standardu Wi-Fi (bezdrátová
-lokální síť). Umožňuje teoretickou přenosovou rychlost až 24 Mb/s, což je 8x
-vyšší rychlost, než specifikace BT 2.1 EDR. Vhodné pro přenosy větších
-objemů dat (především audio a video soubory). Nabízí úzkou spolupráci WiFi a BT 3.0 zařízení. Snížení odběru elektrické energie oproti specifikaci BT
-2.1 EDR. Tato specifikace vylepšuje zabezpečení komunikace mezi
-jednotlivými zařízeními.
-
-Thunderbolt
-• Thunderbolt je rychlé hardwarové rozhraní
-• Vyvinut společností Intel pod projektovým
-označením Light Peak a přiveden na trh s
-technickou spoluprací firmy Apple
-• Používá stejný port a konektor jako Mini
-DisplayPort
-
-Thunderbolt
-• Thunderbolt spojuje PCI-Express a DisplayPort do
-sériového datového rozhraní, které může být provedeno za
-použití delších a levnějších kabelů. Řídící čipy
-Thunderboltu slučují data z těchto dvou zdrojů dohromady
-a rozdělují je zase zpátky ke zpracování v rámci zařízení,
-které tato data obdrží. Tento systém je zpětně kompatibilní
-s existujícím hardware DisplayPortu.
-• Jeden port Thunderbolt umožňuje připojení hubů nebo
-sériové zapojení až sedmi zařízení Thunderbolt, přičemž až
-dvě z těchto zařízení mohou být displeje ve vysokém
-rozlišení používající DisplayPort.
-
-Thunderbolt
-• Původně koncipovaný jako optická
-technologie, Thunderbolt přešel k
-elektrickému připojení kvůli snížení nákladů a
-napájení až 10W pro připojená zařízení.
-
-Thunderbolt
-
-Thunderbolt 3
-• Konektor USB-C
-• podporuje protokoly USB 3.1, USB 3.0 a starší,
-Displayport 1.2 (1.3 zatím ještě ne) i originální
-Thunderbolt. Vše to běží přes rychlou interní
-sběrnici PCI Express 3.0.
-• dvojnásobné zvýšení propustnost oproti druhé
-generaci, zvládne tak až 40 Gb/s přes jediný
-aktivní měděný kabel
-
-Thunderbolt 3
-
-Thuderbolt 4
-• Na obrazovém výstupu musí podporovat dva 4K nebo jeden 8K
-displej (bez upřesnění barevné hloubky, frekvence nebo použité
-komprese). Obojí ale bylo fakticky možné i na TB3, jen ne garantované.
-• Data přes PCIe musí proudit rychlostí 32 Gb/s. Takovou propustnost
-teoreticky nabízel také TB3.
-• Počítače s příkonem do 100 W musí jít napáje alespoň jedním z
-nabízených Thunderboltů. Napájení až 100 watty bylo též u TB3, ale ne
-garantované.
-• Počítač musí podporovat virtualizační technologii Intel VT-d, která bude
-sloužit jako ochrana před zneužitím přímého přístupu do paměti. Tím
-Intel snad definitivně vyléčil zranitelnost Thunderboltu skrz DMA (viz
-exploity Thunderclap a Thunderspy).
-
-Thuderbolt srovnání verzí
-
-
