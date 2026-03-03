@@ -1,151 +1,0 @@
-Paměti úvod
-Petr Františ
-
-PAMĚT
-• Paměť počítače je zařízení, které slouží k
-ukládání programů (resp. instrukcí) a dat.
-Veškeré kroky spojené s operací čtení / zápis,
-včetně zabezpečení přenosu dat řídí paměťový
-řadič
-
-Rozdělení pamětí
-• polovodičové:
-– RAM (RWM) – statické RAM (SRAM), dynamické
-RAM (DRAM)
-– ROM – ROM, PROM, EPROM, EEPROM, Flash ROM
-
-• paměti s pohyblivou magnetickou vrstvou (PMV)
-– HDD, FDD, páskové
-• optické – CD, DVD, BluRay, HD-DVD
-• magnetooptické - pomocí světla (laser) se mění
-magnetické vlastnosti materiálu
-
-Podle závislosti na napájení
-• závislé - pro uchování a přístup k informacím
-potřebuje paměť napájecí napětí, při jeho
-zániku zaniká i informace
-• nezávislé - potřebuje napětí pro činnost
-(čtení / zápis), ale při jeho zániku uchovává
-informaci
-
-Podle přístupu do paměti
-• RAM (Random Access Memory) - s libovolným
-přístupem, doba přístupu k obsahu není
-závislá na umístění (adrese). Jedná se
-především o polovodičové paměti. Počítačové
-disky jsou považovány za paměti typu RAM, i
-když to není přesné.
-• sekvenční - doba přístupu k obsahu je závislá
-na umístění, například páskové paměti.
-
-Podle schopnosti zápisu
-• RWM (Read Write Memory) - Paměť pro čtení i zápis
-(Termín RAM obvykle označuje tento typ paměti název RWM se neuchytil).
-• ROM (Read Only Memory) - Paměť pouze pro čtení.
-Informace je do paměti uložena jednorázově při
-výrobním procesu, nelze ji změnit.
-• PROM (Programmable Read Only Memory) - Paměť se
-vyrobí bez informace a pomocí speciálního zařízení
-(programátor) si ji naprogramuje uživatel. Po zápisu
-nelze informaci v paměti změnit.
-
-Podle schopnosti zápisu
-• EPROM (Erasable Programmable Read Only
-Memory) – Informaci zapsanou v paměti je
-možné vymazat UV zářením a znovu
-přeprogramovat.
-• EEPROM (Electric Erasable PROM) - Obdoba
-EPROM, mazání však probíhá pomocí
-elektrického „impulsu,“ maže se buňka po
-buňce. Počet zápisů je omezen - cca 100 000
-přepisů.
-
-Podle schopnosti zápisu
-• Flash ROM – Elektricky programovatelná paměť. Flash paměť
-uchovává informace v paměťových buňkách stejně jako DRAM
-a SRAM, ale současně pracuje jako pevný disk, jelikož si
-uložené informace zachová i po odpojení od elektrického
-napájení. Ve Flash paměti nemusí být informace neustále
-obnovovány jako v DRAM, nebo neustále pod napájením jako
-DRAM a SRAM aby si informace v sobě uložené uchovala
-• WMM (Write Mostly Memory), někdy uváděna jako WOM
-(Write Only Memory) - Při provozu je používána jen pro zápis,
-informace je čtena jednorázově na konci provozního cyklu.
-Mívá speciální využití (černá skříňka).
-
-Podle určení paměti
-• Vnitřní paměti – registry, operační paměť,
-vyrovnávací paměti cache, paměti pro uložení
-firmware a BIOSu, atd.
-• Vnější paměti – pevný disk, disketa, optické
-paměti, Flash disky a paměťové karty, páskové
-paměti, atd.
-
-Obecné parametry pamětí
-• Kapacita - množství informací v bajtech [B], které je možné do paměti
-uložit.
-• Druh paměti – polovodičová, PMV, optická
-• Přístupová doba - doba od zadání požadavku, do zpřístupnění
-požadované informace.
-• Přenosová rychlost - množství dat, které lze z paměti přečíst (do ní
-zapsat) za jednotku času. Přenosová rychlost se odvíjí od šířky
-propojující sběrnice (počet bitů, tedy datových vodičů) a taktovacího
-kmitočtu sběrnice.
-přenosová rychlost = (šířka sběrnice) * (taktovací kmitočet)
-
-• Latence – údaj souvisící s časováním polovodičových pamětí, latencí se
-rozumí časový prostoj, který prodlužuje dobu přístupu. 6) Cena za bit cena, kterou je nutno zaplatit za jeden bit paměti.
-
-Páskové paměti
-• Technologie LTO (LTO-9)
-– tloušťka 5,2 mikrometru
-– Délka 1035m
-– 8960 podélných záznamových stop
-– Kapacita až 144 TB, při kompresi 360 TB
-– 105 x 102 x 22mm
-
-Feritová pamět
-• V době, kdy neexistovaly polovodičové paměti se v počítačích
-používaly feritové paměti. Ty se skládaly z obrovského
-množství miniaturních feritových toroidů, skrze které
-procházely vodiče. Každý toroid reprezentoval 1 bit (tedy
-logickou jedničku nebo nulu). Úplně první feritové paměti měly
-relativně veliké toroidy v řádech milimetrů (a nebyly vyjímkou
-ani 8-10 mm velké), skrze které procházely 4 vodiče. Dva
-vodiče volily toroid (X a Y pozici bitu) a další dva vodiče měly
-funkce Sense a Inhibit. Pozdější feritové paměti změnšovaly
-průměry toroidů až na desetiny milimetru a používaly pouze 3
-vodiče, dva pro výběr bitu (X a Y) a zbylý vodič měl sdruženou
-funkci Sense a Inhibit.
-
-Feritová pamět
-
-Feritová pamět
-
-Feritová pamět
-
-Feritová pamět
-
-Historické paměti
-
-• Core rope memory (Apollo 11, Mariner,…)
-
-• Magnetická jádra/transformátory představují jednotlivé bity ukotvené
-k desce sekundárním vinutím, pomocí kterého čteme stav bitu.
-Primárním vinutím je v tomto případě horní vodič, který se jednou vine
-okolo všech sedmi bitů, na kterých způsobí indukci, s výjimkou
-toho prostředního. Výsledkem tedy bude sekvence bitů 1110111.
-
-Core rope memory
-
-Tentokrát tvoří primární vinutí deset různých vodičů, z nichž každý vede jinudy, takže
-kapacita vzrostla ze 7 b na 70 b, které můžeme postupným zapínáním primárního vinutí
-sériově přečíst. Tímto způsobem můžeme ušít celý program.
-
-Core rope memory
-
-Core rope memory
-
-Modul Apollo 11
-
-
