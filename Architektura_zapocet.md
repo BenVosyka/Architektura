@@ -54,19 +54,19 @@
 
 **Otázka 11: Jaké jsou hlavní 3 druhy pamětí podle pohledu na médium?**
 
-> *Odpověď:*
+> *Odpověď:* 1) **Polovodičové** – RAM (SRAM, DRAM) a ROM (ROM, PROM, EPROM, EEPROM, Flash ROM). 2) **Paměti s pohyblivou magnetickou vrstvou (PMV)** – HDD, FDD, páskové paměti. 3) **Optické** – CD, DVD, Blu-Ray, HD-DVD. (Existují i magnetooptické – pomocí laseru se mění magnetické vlastnosti materiálu.)
 
 **Otázka 12: Co je rozdíl mezi RAM a ROM z hlediska zápisu?**
 
-> *Odpověď:*
+> *Odpověď:* **RAM (RWM – Read Write Memory)** je paměť s libovolným přístupem určená pro čtení i zápis; je závislá na napájení (volatilní) – při zániku napětí zaniká informace. **ROM (Read Only Memory)** je paměť pouze pro čtení; informace je uložena jednorázově při výrobě a nelze ji změnit; je nezávislá na napájení (nevolatilní) – při odpojení napájení informaci uchovává.
 
 **Otázka 13: Jaký je rozdíl mezi EPROM a EEPROM?**
 
-> *Odpověď:*
+> *Odpověď:* **EPROM (Erasable Programmable ROM)** – informaci zapsanou v paměti je možné vymazat UV zářením a znovu přeprogramovat. **EEPROM (Electrically Erasable PROM)** – obdoba EPROM, ale mazání probíhá pomocí elektrického impulsu, maže se buňka po buňce. Počet zápisů je omezen (cca 100 000 přepisů).
 
 **Otázka 14: Co je Flash ROM a kde se používá?**
 
-> *Odpověď:*
+> *Odpověď:* Flash ROM je elektricky programovatelná paměť, která uchovává informace v paměťových buňkách podobně jako DRAM/SRAM, ale zároveň si uložené informace zachová i po odpojení od napájení (jako pevný disk). Na rozdíl od DRAM nepotřebuje neustálé obnovování dat a na rozdíl od SRAM nepotřebuje trvalé napájení. Používá se v USB flash discích, SSD discích, paměťových kartách, BIOS/UEFI čipech a mobilních zařízeních.
 
 **Otázka 15: Co je SLC, MLC, TLC, QLC u Flash pamětí?**
 
