@@ -1,419 +1,0 @@
-Polovodičové paměti
-Petr Františ
-
-Úvod
-• Polovodičové paměti se skládají z tzv.
-paměťových buněk. Paměťová buňka je
-realizována pomocí integrované součástky
-nebo obvodu, umožňující trvale nebo dočasně
-vyvolat dva stavy (reprezentace log. 0 a log. 1).
-Každá základní paměťová buňka má kapacitu 1
-bit. Podle toho, čím je paměťová buňka
-tvořena se mění vlastnosti polovodičové
-paměti.
-
-Paměťová buňka
-
-Polovodičové paměti lze rozdělit z hlediska čtení/zápisu na
-
-• RWM (Read / Write Memory) – umožňují
-libovolné čtení i zápis dat. Jedná se o paměti
-energeticky závislé. Paměti s přímým přístupem
-(maticové uspořádání buněk) se označují jako
-paměti RAM (Random Access Memory).
-• ROM (Read Only Memory) – jsou určeny
-především pro čtení zapsané informace. Jedná
-se o paměti energeticky nezávislé.
-
-Statická paměť RAM (SRAM)
-• SRAM = Static Random Access Memory
-• Paměťová buňka je tvořena bistabilním
-klopným obvodem (BKO). Stav klopného
-obvodu reprezentuje logickou hodnotu 0 nebo
-1.
-
-Statická paměť RAM (SRAM)
-
-SRAM
-• Po výběru příslušné paměťové buňky
-(dekódováním adresy) se řádkovým vodičem
-sepnou spínače, čímž dojde k připojení
-paměťové buňky na datové (sloupcové)
-vodiče. V této chvíli můžeme z buňky číst nebo
-do ní zapisovat (resp. změnit stav BKO). Při
-čtení se zkoumá jak skutečná, tak inverzní
-hodnota (slouží ke kontrole správnosti čtení).
-
-SRAM
-• Jedna paměťová buňka obsahuje minimálně 4
-tranzistory (2 tvoří samotný BKO, zbývající řídí
-proces čtení/zápis).
-• Tato buňka je velice rychlá, vyžaduje menší
-proud než paměť dynamická, avšak fyzicky
-zabírá na polovodičovém čipu paměti poměrně
-velký prostor. Jedná se tedy o paměti malé
-kapacity.
-• Využití: registry, vyrovnávací paměť CACHE
-
-Dynamická paměť RAM (DRAM)
-• DRAM = Dynamic Random Access Memory
-• Paměťová buňka je tvořena kondenzátorem (ve
-skutečnosti se využívá kapacity PN přechodu) a
-tranzistorem typu MOSFET, kterým se řídí
-nabíjení a vybíjení paměťového kondenzátoru.
-Mezi jeho vývody lze naměřit napětí, které je
-úměrné velikosti náboje. Logické hodnoty 0 a 1
-odpovídají vybitému a nabitému
-kondenzátoru.
-
-DRAM
-
-DRAM
-• DRAM refresh
-– Protože je kapacita paměťové buňky reálná (má
-svůj svod vlivem konečného odporu nevodivé
-vrstvy kondenzátoru) a velmi malá, dochází k
-rychlému samovolnému vybíjení (ztrátě
-informace). Aby ke ztrátě informace nedošlo,
-provádí se periodická obnova dat, tzv. refresh.
-Refresh (obnovování informace) se provádí po
-celých řádcích. V okamžiku obnovování informace
-nelze provádět operace čtení/zápis.
-
-DRAM
-• Destruktivní paměť při čtení
-– Při čtení je na adresový vodič přivedena hodnota
-log. 1, která způsobí otevření tranzistoru. Pokud
-byl kondenzátor nabitý, zapsaná hodnota přejde
-na datový vodič. Tímto čtením však dojde k vybití
-kondenzátoru a tedy ztrátě uložené informace.
-Přečtenou hodnotu je nutné opět do paměti
-zapsat.
-
-DRAM
-• Z důvodu periodické obnovy informace a
-obnovy informace po jejím přečtení jsou
-paměti DRAM pomalejší při čtení/zápisu než
-paměti SRAM. Výhodou je menší velikost
-paměťové buňky na polovodičovém čipu –
-dosahují tedy větších kapacit než paměti
-SRAM.
-• Využití: operační paměť, videopaměť grafické
-karty
-
-Typy DRAM
-• Synchronous Dynamic RAM (SDRAM)
-– Jedná se o tzv. synchronní paměť – tato paměť pracuje
-na stejném taktovacím kmitočtu paměťové sběrnice na
-základní desce (propojení mezi pamětí a paměťovým
-řadičem umístěným v severním mostu čipové sady).
-Během jednoho hodinového impulsu provede 1 operaci
-přenosu dat.
-– Paměti SDRAM jsou schopny pracovat s kmitočtem 66,
-100, 133 MHz (PC66, PC100, PC133). Datová propustnost
-byla 533 až 1066 MB/s, napájecí napětí 3,3 V, kapacita
-do 512 MB.
-
-Typy DRAM
-• DDR (Double Data Rate)
-DDR paměť přenáší data jak během náběžné, tak
-sestupné hrany hodinového impulsu. (během
-jednoho impulsu se tedy provedou 2 operace).
-Pracovní kmitočet 200–600 MHz (DDR200–DDR600),
-propustnost 1,6–4,8 GB/s, napájecí napětí 2,5 V.
-Kapacita jednoho paměťového modulu se pohybuje
-od 64 MB až 2 GB.
-
-DDR
-
-Typy DRAM
-• DDR2
-– Tyto paměti pracují stejně jako DDR. Rozdíl je v použití
-nižšího napájecího napětí (1,8 V). Díky nižšímu napětí je
-spotřeba pamětí DDR2 nižší a je možné je taktovat na vyšší
-pracovní frekvence. DDR2 však neznamená, že jsou tyto
-paměti 2× rychlejší než DDR. Kapacita jednoho
-paměťového modulu se pohybuje od 256 MB až 4 GB.
-– Pracovní kmitočet pamětí se pohybuje v rozmezí 400–1066
-MHz s datovou propustností až 8,5 GB/s. Jedná se o
-efektivní hodnoty kmitočtu, jde se o čtyřnásobek
-základního kmitočtu paměťové sběrnice (technologie QPB).
-
-Typy DRAM
-• DDR3
-– Napájecí napětí bylo sníženo na 1,5 V (nižší
-spotřeba modulů + nižší vyzářené teplo). Pracovní
-kmitočet pamětí se pohybuje v rozmezí 800–2133
-MHz s datovou propustností až 17 GB/s. Kapacita
-jednoho paměťového modulu se pohybuje od 512
-MB až 8 GB.
-
-Typy DRAM
-• DDR4
-– Využívá napájecí napětí 1,2 V. Pracovní kmitočty
-pamětí se pohybují v rozmezí 2133–2400 MHz,
-standardně jsou řízeny 4-kanálovým paměťovým
-řadičem. Kapacita jednoho paměťového modulu
-se pohybuje v rozmezí 8 GB až 128 GB.
-
-Typy DRAM
-• DDR5
-• 4,8 Ghz – 6 Ghz
-• až 128 GB na modul
-• 288 pinů
-• 2 x 32bit kanály
-
-Paměti GDDR
-• GDDR (Graphics Double Data Rate) SDRAM
-• Použití: GDDR paměti jsou speciálně navrženy pro
-použití v grafických kartách a systémech, které vyžadují
-vysoké propustnosti pro zpracování velkých objemů
-grafických dat. Tyto paměti jsou klíčové pro výkon ve
-hrách a profesionálních grafických aplikacích.
-• Vývoj: GDDR paměti jsou optimalizovány pro široké
-propustnosti a rychlé přístupy, díky čemuž jsou ideální
-pro vysoce náročné grafické operace.
-• Varianty: Existují různé typy GDDR pamětí, včetně
-GDDR3, GDDR5, GDDR5X, GDDR6 a nejnovější GDDR6X,
-které nabízejí postupné zlepšení v rychlosti a efektivitě.
-
-Paměti GDDR
-•
-•
-•
-
-GDDR7 si k vyšším propustnostem pomáhají efektivnějším
-kódováním.
-Dřívější čipy se spoléhaly na modulaci NRZ (bez návratu k nule),
-která během dvou cyklů přenesla dva bity informace.
-Nové se bude používat PAM3 (pulzně-amplitudová modulace), jež za
-dva cykly přenese tři bity. To zvyšuje nároky na kvalitu signálu a
-může vést k vyšší spotřebě
-
-Rozdíl DDR a GDDR
-• Účel: DDR je určena pro široké spektrum výpočetních
-aplikací, zatímco GDDR je specificky navržena pro
-grafické aplikace.
-• Rychlost a propustnost: GDDR paměti obvykle nabízí
-vyšší rychlosti a propustnosti než DDR, což je nezbytné
-pro zpracování komplexních grafických úloh.
-• Architektura: GDDR paměti mají architekturu
-optimalizovanou pro široké propustnosti, zatímco DDR
-paměti jsou optimalizovány pro nízkou latenci a rychlé
-přístupy k malým objemům dat.
-• Každý typ paměti je tedy navržen s ohledem na různé
-potřeby a aplikace, ačkoli oba využívají princip double
-data rate pro zvýšení výkonu přenosu dat.
-
-Typy DRAM
-• RDRAM (Rambus DRAM)
-– Paměti vyvinuté firmou Rambus a Intel, určené pro
-procesory Pentium 4 s podporou technologie QPB.
-Data se přenášela 2x za hodinový cyklus podobně
-jako paměti DDR. Velká datová propustnost byla
-dosažena velkým taktovacím kmitočtem paměti.
-Vysoká cena modulů (RIMM modul), nutnost
-osadit 2 nebo 4 moduly a nepoužité banky osadit
-tzv terminátorem (CRIMM modul) způsobilo, že se
-tyto paměti na trhu neprosadily.
-
-DRAM
-• Paměťový modul DIMM
-– Všechny novější paměti (SDRAM, DDR, DDR2,
-DDR3) jsou umístěny na modulech typu DIMM
-(Dual In-line Memory Module). Šířka datové
-sběrnice je 64 bitů. Paměťové moduly DIMM mají
-po stranách otvory pro zajištění v patici na
-základní desce. Mezi kontakty jsou otvory (tzv.
-klíče či zámky) uspořádané asymetricky, pro
-zajištění správné orientace modulu v paměťové
-bance.
-
-DRAM
-
-DRAM
-
-DRAM
-
-DRAM
-
-DRAM
-
-Technologie operační paměti
-• Vícekanálový řadič
-– Dual channel = 2 přenosové kanály. Místo jedné
-paměťové sběrnice spojující operační paměť s
-řadičem paměti jsou použity sběrnice dvě.
-Propustnost tak teoreticky vzroste dvakrát.
-
-Dual channel řadič
-• Pro vyšší datovou propustnost je potřeba splnit tyto
-podmínky
-– Podpora čipové sady na základní desce.
-– Paměťové moduly se musí osazovat v páru. Paměťové
-banky na základní desce jsou z tohoto důvodu barevně
-odlišeny. V principu platí, že se každý modul musí umístit
-do jiné skupiny paměťových banků
-– Oba kanály musí být osazeny stejným typem
-paměťového modulu DIMM (lze koupit tzv. dual channel
-kit, obsahující identický pár paměťových modulů).
-
-Dual channel
-
-Polovodičové paměti ROM
-• Jedná se o paměti energeticky nezávislé, většinou
-určené pouze pro čtení zapsaného obsahu
-(programy a data), s přímým přístupem. Slouží
-především k uložení firmware v elektronických
-zařízeních, popřípadě BIOSu základní desky.
-• Paměti ROM rozdělujeme do dvou hlavních skupin:
-– ROM, PROM – po naprogramování nelze změnit obsah
-paměti
-– EPROM, EEPROM, Flash ROM – paměti lze omezeně
-přeprogramovat (změnit obsah)
-
-Permanentní paměti ROM, PROM
-
-Informace je do této paměti zapsána při její výrobě a poté již není možné žádným
-způsobem obsah změnit. Paměťová buňka paměti ROM může být realizována jako
-dvojice nespojených vodičů a vodičů propojených přes polovodičovou diodu (realizace
-logické 0 a 1).
-
-PROM (Programmable ROM)
-• Paměť, kterou si může uživatel naprogramovat sám. Program
-se do paměti ukládá pomocí speciálního zařízení –
-programátoru.
-Při výrobě je vytvořena matice obsahující spojené
-adresové vodiče s datovými vodiči přes
-polovodičovou diodu a tavnou pojistku
-(nejjednodušší typ paměti PROM). Takto vyrobená
-paměť obsahuje na začátku samé hodnoty log.1.
-Během programování (zápisu informace) se na
-příslušnou paměťovou buňku přivede takový
-proudový impuls, který způsobí přepálení pojistky
-(nevodivý stav). Tento zápis je možné provést
-pouze jednou.
-
-Mazatelné paměti EPROM, EEPROM, Flash
-ROM
-• EPROM (Erasable PROM)
-– Paměť EPROM je statická, energeticky nezávislá
-paměť, do které může uživatel provést zápis
-pomocí programátoru. Zapsané informace je
-možné vymazat působením UV záření (doba
-působení je asi půl hodiny).
-
-EEPROM (Electrically Erasable PROM)
-• Tento typ paměti je svou konstrukcí podobný pamětem
-EPROM. Oproti pamětem EPROM se mažou elektrickými
-impulsy, doba mazání se pohybuje v milisekundách.
-• Paměť má typickou životnost 200 tisíc zápisů což je
-řádově více než paměť typu flash, další výhodou pamětí
-EEPROM je vyšší životnost dat v nich uložených, Typická
-hodnota Data Retention je 20, což je opět řádově více
-než u pamětí typu flash. Hlavní nevýhodou je vyšší
-složitost paměťové buňky a s tím související nižší hustota
-a vyšší cena.
-
-Flash ROM
-• Jedná se o rychlejší paměť než předešlé typy, v
-principu se s ní dá pracovat jako s RAM (čtení /
-zápis), ale po odpojení napájení se informace
-nevymaže. Vymazání informace se provádí
-elektrickou cestou, jejich přeprogramování je
-možné provést přímo v počítači. Paměť typu
-Flash ROM tedy není nutné před vymazáním
-(naprogramováním) z počítače vyjmout a
-umístit ji do speciálního programovacího zřízení.
-
-Flash ROM
-• Energeticky nezávislé paměti - uchová data i bez napájení
-• Umožňují přímé čtení i zápis (stejně jako paměti typu RAM)
-• Nízká úroveň napájení - velice nízký příkon vhodný pro
-přenosná zařízení
-• Odolnost - jsou schopny odolat velkým otřesům bez ztráty dat
-• Malé rozměry - vhodná pro široký rozsah přenosné elektroniky
-• Rychlost - extrémně krátká vybavovací doba
-• Omezená životnost na cca 100 000 cyklů výmaz / zápis u každé
-paměťové buňky
-
-Flash ROM
-
-SSD
-• Solid State Disk (SSD) – typ paměťového média, který je postaven
-na principu vysokorychlostních polovodičových pamětí typu
-FlashROM. Postupně nahrazují klasické pevné disky s magnetickým
-záznamem.
-
-SSD
-• Důvod degradace výkonu SSD:
-– Operační systém pouze označí smazané bloky jako
-"volné" v seznamu souborového systému (data
-však zůstanou na disku). Řadič SSD však očekává,
-že do prázdných bloků budou vepsány log. 0. SSD
-tedy jednoznačně neví, které bloky jsou skutečně
-volné a při následném zápisu musí každou buňku
-nejprve přečíst a modifikovat (nastavit na nulu),
-aby ji mohl přepsat.
-
-Flash cell (unipolární tranzistor)
-
-• Jedno hradlo je ovládací (CG – control gate), druhé je plovoucí (FG – floating gate),
-izolované od okolí vrstvou oxidu. Jelikož je FG izolované, všechny elektrony na něj
-přivedené jsou zde „uvězněny“. Tím je uložena informace.
-
-Flash cell
-• Flash buňka je naprogramovaná (nastavená na specifickou
-hodnotu) spuštěním toku elektronů ze zdroje (Source) do
-odvodu (Drain). Přivedení velkého napětí na CG pak poskytne
-dostatečně silné elektrické pole pro jejich vysátí na FG.
-• Pro vymazání flash buňky je velký napěťový rozdíl přiveden
-mezi CG a zdroj (Source), což odvede elektrony pryč skrz
-kvantový tunel.
-• Současné flash paměti jsou rozdělené do vymazatelných částí
-nazývaných buď bloky, nebo sektory. Všechny paměťové
-buňky v rámci jednoho bloku musí být vymazány současně.
-
-Technologie paměťových čipů FlashROM
-• SLC (Single-Level Cell) - jedna paměťová
-buňka dokáže uchovat 1 bit (0, 1)
-– Vysoká přenosová rychlost čtení/zápis, nižší
-spotřeba energie a vyšší trvanlivosti buněk.
-Nevýhodou jsou výrobní náklady na jeden MB,
-proto se SLC flash technologie používá ve vysoce
-výkonných pamětech, kde je důležitá rychlost a
-spolehlivost.
-
-Technologie paměťových čipů FlashROM
-• MLC (Multi-Level Cell) - jedna paměťová
-buňka dokáže uchovat 2 bity (00, 01, 10, 11)
-– Tím, že uchovávají více bitů v každé buňce, mají
-nižší přenosové rychlosti a nižší trvanlivost buněk
-než paměti SLC. Výhodou jsou nižší výrobní
-náklady. Technologie MLC flash se používá ve
-většině standardních paměťových zařízeních (např.
-SSD).
-
-Technologie paměťových čipů FlashROM
-• TLC (Tripple-Level Cell) - jedna paměťová buňka
-dokáže uchovat 3 bity
-– Tím, že uchovávají ještě víc bitů v každé buňce, mají
-paměti s technologií TLC nižší přenosovou rychlost, vyšší
-chybovost a nižší trvanlivost buněk než paměti MLC a SLC.
-Výhodou pamětí TLC je, že paměťový čip je pro určitou
-kapacitu fyzicky menší než čipy SLC a MLC, spotřebuje
-méně energie a je levnější pro výrobu. Technologie TLC
-flash se používá většinou v levných zařízeních, kde rychlost
-a spolehlivost není tak důležitá.
-
-Technologie paměťových čipů FlashROM
-• QLC (Quad -Level Cell) - jedna paměťová
-buňka dokáže uchovat 4 bity (16 úrovní)
-– SanDisk X4 flash paměťové karty jsou založené na
-NAND paměti, která ukládá čtyři bity v buňce,
-využívající 16 samostatných úrovní nabíjení v
-každém tranzistoru. Negativní aspekty TLC jsou
-zesíleny, ovšem QLC benefituje z vyšší hustoty
-uložení a nižší výrobní ceny.
-
-
