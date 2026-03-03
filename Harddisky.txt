@@ -1,363 +1,0 @@
-Pevné disky
-Petr Františ
-
-Úvod, základní principy
-• Magnetický záznam dat je prováděn silovým
-působením magnetického pole na
-feromagnetický materiál (záznamová vrstva).
-• Celý povrch disku je tvořen mikroskopickými
-magnetickými částicemi – doménami, které
-mají každá jeden severní a jeden jižní
-magnetický pól.
-
-Princip záznamu
-• Záznam na magnetické médium (disketa, pevný disk, magnetofonová
-páska) je prováděn záznamovou indukční hlavou
-• Cívkou elektromagnetu prochází záznamový proud. Podle Ampérova
-pravidla pravé ruky se vytvoří magnetický tok Φ určitého směru, který
-se začne uzavírat magnetickým obvodem. V místě, kde je magnetický
-obvod přerušen štěrbinou, dojde k rozptylu magnetického toku a jeho
-zásahu do povrchu magnetické vrstvy. Tím dojde k zmagnetování
-domény.
-• Změnou směru záznamového proudu se mění směr magnetizace
-jednotlivých domén.
-• Velikost zmagnetovaných domén závisí na šířce štěrbiny a vzdálenosti
-hlavy. Čím jsou vzdálenosti menší, tím je menší oblast záznamu a tím
-větší je hustota záznamu na určitou délku nosiče.
-
-Princip záznamu
-
-Princip čtení
-
-Princip čtení
-• Moderní pevné disky používají pro čtení
-magnetorezistivní (MR, resp. novější GMR) hlavu,
-která mění svůj elektrický odpor při změně orientace
-magnetického pole, tedy při přechodu mezi dvěma
-různě orientovanými doménami.
-• Čtecí hlavou prochází elektrický proud, který dle
-velikosti elektrického odporu GMR snímače vytvoří
-úbytek napětí. Vyznačuje se velmi malými rozměry a
-rychlou reakcí. Umožňují vysokou hustotu záznamu
-dat na plotnu.
-
-Kódování dat
-• Jelikož u PMV jsou dva stavy reprezentující log. 0 a log.
-1 obecně realizovány různými směry magnetizace.
-• Tato změna může nastat z kladného toku na záporný
-nebo naopak ze záporného na kladný.
-• Každá takováto změna se při čtení projeví jako
-napěťový impuls (P).
-• K reprezentaci dat na magnetickém médiu se tedy
-používá přítomnosti nebo nepří- tomnosti napěťového
-impulsu – mezera (N).
-
-Kódování dat
-
-Kódování dat
-• V praxi jde o nefunkční řešení. V případě delší
-posloupnosti log. 0, která by byla zaznamenána jako
-dlouhá posloupnost mezer bez jakýchkoliv impulsů, by
-došlo ke ztrátě synchronizace pevného disku s řadičem
-(nelze určit, kolik mezer bylo přečteno).
-• Je tedy nutné zvolit vhodný kompromis při kódování
-dat tak, aby při čtení dat nedošlo ke ztrátě
-synchronizace a zároveň, aby vlivem přehnaně velkého
-počtu impulsů nedocházelo k plýtvání paměťovým
-prostorem a tím ke zmenšení celkové kapacity.
-
-FM modulace
-
-MFM modulace
-
-MFM modulace
-
-RLL modulace
-
-RLL modulace
-• Jednotlivé vzorky a jejich zakódování jsou voleny tak,
-aby mezi dvěma impulsy byly minimálně 2 a
-maximálně 7 mezer. Toto kódování je asi o 50 %
-úspornější než MFM kódování a bylo používáno u
-starších pevných disků.
-• Moderní pevné disky používají většinou nějakou
-modifikaci 2,7 RLL kódování, ozna- čovanou např.
-ARLL, ERLL apod., která poskytuje ještě větší úsporu
-a tím umožňuje záznam většího objemu dat na
-médium.
-
-Pevný disk (HDD – Hard Disk Drive)
-• Pevný disk je velkokapacitní paměť s
-pohyblivou magnetickou vrstvou, energeticky
-nezávislá. Používá se jako hlavní paměťové
-úložiště počítače. Jsou zde uloženy všechny
-nainstalované programy a jejich data (včetně
-operačního systému), instalátory programů a
-tzv. souborový systém disku.
-
-Pevný disk IBM
-• 1956, IBM přišla se
-světovou inovací 5MB
-HDD
-• IBM 305 RAMAC hard
-drive vážil více než tunu
-a měl velikost ledničky
-
-Pevný disk – IBM
-
-Konstrukce
-• Pro čtení se používá magnetorezistivní (MR, resp.
-novější GMR) hlava, která mění svůj elektrický odpor
-při změně orientace magnetického pole, tedy při
-přechodu mezi logickými stavy 0 a 1. GMR (Giant
-MR) čtecí hlavy využívají současné HDD. Vyznačuje se
-velmi malými rozměry a rychlou reakcí. Umožňují
-vysokou hustotu záznamu dat na plotnu.
-• Hlavičky jsou uchyceny na raménku vystavovacího
-mechanismu. Jeho úkolem je přemístit hlavičky nad
-požadovanou stopu.
-
-Konstrukce
-• Čím jsou otáčky ploten vyšší, tím je přístupová
-doba menší. Mezi rychlostí otáčení a
-provozními podmínkami platí: čím více otáček
-za minutu, tím horší provozní podmínky.
-• S rostoucím počtem otáček vzniká větší teplo
-uvnitř pouzdra disku, což zvyšuje nároky na
-chlazení. Přehřívání HDD vede k častějšímu
-výskytu chyb a tím i ke snížení životnosti HDD.
-Navíc se zvyšuje hlučnost disku.
-
-Geometrie disku
-• Před zápisem jakýchkoliv dat je nutné pevný
-disk nejprve naformátovat.
-– Fyzické, neboli nízkoúrovňové formátování (LLF –
-low level format): pomocí elektromagnetického
-záznamu je záznamová vrstva rozdělena na stopy a
-sektory oddělené mezerami.
-– Logické, neboli vysokoúrovňové formátování (HLF
-– high level format): vytváří se logická struktura
-(tzv. souborový systém) pevného disku.
-
-Geometrie disku
-• Stopa (track) je oblast pro ukládání dat ve tvaru
-soustředné kružnice. Každá stopa je rozdělena na menší
-části, kterým se říká sektory.
-• Sektor (sector) je část jedné stopy, ohraničená na začátku i
-konci identifikačními značkami, určujícími mimo jiné jeho
-číslo, polohu, začátek a konec. Jde o základní jednotku pro
-ukládání dat.
-• Standardní sektory mají velikost 512 B. Ve skutečnosti je to
-více, například 571 B, z toho 512 B připadá na ukládání dat
-a zbytek slouží k ulo žení identifikačních údajů sektoru.
-
-Logický a fyzický disk
-Fyzický disk
-Fyzický disk
-
-FAT
-• FAT je jednoduchý souborový systém, proto je podporován prakticky všemi
-operačními systémy
-• Navržen a naprogramován Marcem McDonaldem v roce 1977 na základě
-série diskuzí s Billem Gatesem
-• V roce 1983 Microsoft vydal další verzi s podporou podadresářů a používající
-16 bitů na adresaci clusteru.
-• V roce 1995 vyšlo s Windows 95 další rozšíření pro FAT12 a FAT16, nazývané
-VFAT. Novinkou byla podpora dlouhých jmen souborů (delších než původních
-8 znaků jména a 3 znaky přípony).
-• V roce 1997 vyšla verze nazývaná FAT32. Přináší 32bitové adresy clusterů, kde
-číslo alokační jednotky využívá 28 bitů. Tím se zvyšuje limit velikosti
-diskového oddílu na 8 TB pro 32 kB cluster (228×32 kB) a velikost souborů na 4
-GB (přesně 232−1 bajtů), takže není vhodný pro ukládání velkých souborů,
-jako jsou obrazy DVD, velké soubory s videem a podobně.
-
-FAT
-• FAT je lineární tabulka, kterou DOS používá pro
-udržení informací o fyzické pozici dat na disku a pro
-nalezení volného místa na uložení nových souborů.
-
-FAT
-
-Správa disků
-
-Geometrie disku
-• menší cluster - výhoda pro malé soubory,
-nevýhoda pro velké soubory (velká
-fragmentace souborů).
-• vetší cluster - výhoda pro velké soubory,
-nevýhoda pro malé soubory (neefektivní
-využití volného paměťového prostoru).
-
-Parametry disku
-1. Počet stop (tracks)
-2. Počet sektorů (sectors)
-3. Počet cylindrů
-4. Počet a velikost clusterů
-5. Počet čtecích / zapisovacích hlaviček (heads) - tento počet je
-shodný s počtem aktivních ploch, na které se provádí
-záznam. Většinou každý jednotlivý disk má dvě aktivní plochy
-a k nim příslušné čtecí (zapisovací) hlavy.
-• Čím větší bude hustota stop na záznamové vrstvě a čím menší
-budou záznamové a čtecí hlavy, tím víc dat lze na záznamovou
-vrstvu uložit.
-
-Parametry disku
-• Otáčky - 4200, 5400, 7200, 10000, 15000 RPM
-• Přístupová doba - Průměrný (střední) čas v
-milisekundách (ms), za který je disk připraven
-číst nebo zapisovat data od přijetí požadavku
-řadičem disku.
-• Formát disku - Průměr plotny v anglických
-palcích: 1.8‘‘, 2.5‘‘, 3.5‘’, 5.25’’
-
-S.M.A.R.T
-• Pomocí technologie S.M.A.R.T (Self-Monitoring,
-Analysis and Reporting Technology) se periodicky měří a
-sledují významné parametry a chování pevného disku a
-při detekci hodnot mimo toleranci stanovenou
-výrobcem dojde k odeslání varování operačnímu
-systému.
-• Jde tedy o technologii, která za určitých podmínek
-dokáže předvídat selhání pevného disku.
-• Elektronika HDD snímá celou řadu parametrů, které
-mají vliv na zdraví, životnost a výkonnost pevného disku
-
-NCQ
-• NCQ (Native Command Queing) je technologie,
-která v některých případech umož- ňuje zvýšit
-výkon pevných disků s rozhraním SATA II a novější.
-• Při použití NCQ pevný disk sám optimalizuje
-pořadí, ve kterém jsou vykonány požadavky na
-zápis nebo čtení. Tato optimalizace může
-redukovat nadbytečný pohyb hlaviček disku. Tím
-se zvýší rychlost přenosu dat mezi řadičem a
-diskem a také se mírně sníží opotřebení disku.
-
-AAM
-• AAM (Automatic Acoustic Management) je technologie,
-pomocí které lze řídit hladinu hluku pevných disků.
-• AAM ovlivňuje rychlost pohybu hlaviček pevného disku tím je přímo ovlivněna přístupová doba pevného disku.
-• AAM ovlivňuje pouze intenzitu zvuku vydávaného při
-pohybu ("seek") hlaviček pevného disku, neovlivní však
-hladinu permanentního hluku, který vydávají rotující
-plotny pevného disku - ta je ovlivněna především
-použitými ložisky (kuličková vs. kapalinová) a rychlostí
-rotace ploten.
-
-PMR vs SMR
-• perpendicular magnetic recording (kolmý
-zápis – PMR)
-• shingled magnetic recording („šindelový“
-záznam – SMR)
-• Způsoby zvyšování hustoty magnetického
-záznamu
-
-PMR
-• označované rovněž jako pevné disky s konvenčním
-zápisem (CMR), vycházejí z technologie magnetizace
-bitů dat svisle k rotujícímu pevnému disku.
-• Magnetické stopy se zapisují vedle sebe, aniž by se
-vzájemně překrývaly.
-• Velikost zapisovací hlavy je obvykle větší než velikost
-čtecí hlavy.
-• Aby mohli výrobci pevných disků zvyšovat prostorovou
-kapacitu, pokoušeli se zmenšovat velikost zápisové
-hlavy až k jejímu fyzickému limitu.
-
-PMR
-
-SMR
-• Na rozdíl od disků PMR, které neumožňují
-vzájemné překrývání magnetických stop,
-používají pevné disky SMR technologii
-sekvenčního zápisu dat,
-• Magnetická stopa může překrývat část
-předchozí zapsané stopy, čímž se zvýší
-prostorová hustota.
-• Takto může čtecí hlava získat zapsaná data
-z nezakrytých částí magnetických stop.
-
-SMR
-
-PMR vs SMR
-
-PMR vs SMR
-• Čtení je stejně rychlé (čtecí hlavě stačí úzká stopa)
-• Pokud ale dojde k úpravě nebo přepsání již zapsaných dat,
-nemůže zapisovací hlava zaznamenávat data přímo do
-stávající magnetické stopy, aby nedošlo k poškození přilehlé
-magnetické stopy. Upravená data se zapíší do prázdné
-oblasti disku a původní magnetická stopa se starými daty
-bude dočasně ponechána beze změny.
-• Až bude pevný disk nečinný, provede reorganizaci, při které
-dojde k automatickému vymazání starých datových bitů
-z původní magnetické stopy a ke zpřístupnění této
-magnetické stopy pro nová data.
-
-PMR vs SMR
-• S ohledem na tento mechanizmus reorganizace je pro
-disk SMR klíčová určitá doba nečinnosti. Pokud na
-disku SMR dochází k dlouhému a intenzivnímu
-přepisování, nebude mít disk dostatek času provést
-reorganizaci magnetických stop a bude se zvyšovat
-počet magnetických stop, které budou dočasně
-nezměněné.
-• Disk SMR tak bude muset současně zapisovat nová
-data a reorganizovat starou magnetickou stopu, čímž
-může dojít k určitému snížení výkonu při čtení a zápisu.
-
-PMR, SMR a RAID
-• RAID svazek by měl používat buď na všech
-discích PMR nebo na všech discích SMR.
-• Pokud by byl svazek RAID vytvořen současně
-na discích PMR a SMR, může to mít vliv na
-celkový výkon disků z důvodu provádění
-reorganizace dat disky SMR.
-
-WD Tabulka
-
-Technologie HAMR
-• Heat Assisted Magnetic Recording
-• S touto technologií je možné mít jednotlivá
-magnetická „zrnka“ blíže k sobě, čímž se zvýší
-hustota na centimetr čtvereční.
-• Aby bylo možné měnit polaritu z reprezentace
-0 na 1 a opačně, je nutný „ohřev“ laserem v
-přesném místě zrnka. Proces ohřátí i
-zchladnutí přitom trvá jen v řádu nanosekund.
-
-Seagate Mach 2
-• používají se dva aktuátory pro dvě sestavy
-čtecích hlav. Zjednodušeně je to podobné,
-jako kdybyste měli dva samostatné pevné
-disky v jednom, byť všechny plotny rotují
-stejnou rychlostí. Díky této technologii lze
-zvýšit rychlosti sekvenčního čtení, zápisu i
-náhodného přístupu na dvojnásobek.
-
-Seagate Mach 2
-
-Zranitelnost disků
-• Jeden z velkých výrobců počítačů zjistil, že při přehrávání
-videoklipu k písni Rhythm Nation od Janet Jackson
-dochází u některých modelů notebooků k pádu.
-• Během následného vyšetřování se ukázalo, že přehrávání
-zmíněného videoklipu dokázalo shodit nejen zařízení, na
-kterém byla písnička spuštěná, ale i další notebook,
-nacházející se v jeho blízkosti. Toto zjištění pak určilo další
-směr zkoumání, protože bylo zřejmé, že důvodem pádu
-není klip jako takový, ale jeho zvuk.
-• písnička obsahuje zvuk, který rezonuje s mechanickými
-pevnými disky s 5400 otáčkami
-
-Zranitelnost disků
-• CVE-2022-38392. Popisek uvádí: „Některé
-pevné disky s 5400 otáčkami za minutu,
-dodávané s přenosnými počítači přibližně v
-roce 2005, umožňují fyzicky blízkým útočníkům
-způsobit odepření služby (selhání zařízení a
-pád systému) prostřednictvím rezonančního
-frekvenčního útoku se zvukovým signálem z
-hudebního videa Rhythm Nation.“
-
-
