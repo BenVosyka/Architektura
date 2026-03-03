@@ -23,7 +23,7 @@ Podle Von Neumannova schématu:
 *(Zdroj: Historie-a-vývoj-počítačů.txt)*
 
 ### Otázka 3: Jaký je hlavní rozdíl mezi Von Neumannovou a Harvardskou architekturou?
-*(Odpověď nebyla nalezena v prezentacích.)*
+*(Odpověď nenalezena v prezentacích – doplnit později)*
 
 ### Otázka 4: Co umožňuje 64-bitový systém oproti 32-bitovému?
 64-bitový systém umožňuje rozšíření instrukční sady o instrukce pro práci s 64-bitovými čísly, implementaci 64-bitových registrů pro uložení instrukcí a dat a zvýšení adresového prostoru operační paměti nad rámec 4 GB (2³² = 4 GB) díky technologii EM64T. Podporuje plně 64-bitové výpočetní jednotky a registry.
@@ -95,7 +95,13 @@ Flash ROM je elektricky programovatelná paměť. Flash paměť uchovává infor
 *(Zdroj: Paměti úvod.txt)*
 
 ### Otázka 15: Co je SLC, MLC, TLC, QLC u Flash pamětí?
-*(Odpověď nebyla nalezena v prezentacích.)*
+Jde o technologie paměťových čipů Flash ROM lišící se počtem bitů uložených v jedné buňce:
+- **SLC** (Single-Level Cell) – 1 bit na buňku (0, 1). Vysoká přenosová rychlost čtení/zápis, nižší spotřeba energie, vyšší trvanlivost buněk, ale vyšší výrobní náklady. Používá se ve vysoce výkonných pamětech.
+- **MLC** (Multi-Level Cell) – 2 bity na buňku (00, 01, 10, 11). Nižší přenosové rychlosti a trvanlivost než SLC, ale nižší výrobní náklady. Používá se v běžných SSD.
+- **TLC** (Triple-Level Cell) – 3 bity na buňku. Nižší přenosová rychlost, vyšší chybovost a nižší trvanlivost než MLC/SLC. Čip je fyzicky menší, levnější pro výrobu. Používá se v levných zařízeních.
+- **QLC** (Quad-Level Cell) – 4 bity na buňku (16 úrovní). Negativní aspekty TLC jsou zesíleny, ale benefituje z vyšší hustoty uložení a nižší výrobní ceny.
+
+*(Zdroj: Polovodičové paměti.txt)*
 
 ---
 
@@ -260,9 +266,9 @@ PCI Express je založena na sériové komunikaci – je kompaktnější, vyžadu
 *(Zdroj: Sběrnice.txt)*
 
 ### Otázka 41: Kolik linků má PCIe x16 a jaká je rychlost PCIe 4.0 x16?
-PCIe x16 má 16 linků (16 párů jednosměrných spojů). PCIe 5.0 je 2× rychlejší než verze 4.0.
+PCIe x16 má 16 linků (16 párů jednosměrných spojů). PCIe 5.0 je 2× rychlejší než verze 4.0. Přesná hodnota rychlosti PCIe 4.0 x16 v prezentacích uvedena není.
 
-*(Odpověď na přesnou rychlost PCIe 4.0 x16 nebyla nalezena v prezentacích.)*
+*(Zdroj: Sběrnice.txt)*
 
 ### Otázka 42: Co je AGP a k čemu sloužilo?
 AGP (Accelerated Graphics Port) je vysokorychlostní lokální sběrnice napojena přímo na severní most (obvod MCH) čipové sady. Pomocí této sběrnice bylo možné připojit k počítači výhradně grafickou kartu. V současné době je AGP sběrnice vytlačena rychlejší sériovou sběrnicí PCI Express x16.
@@ -270,10 +276,14 @@ AGP (Accelerated Graphics Port) je vysokorychlostní lokální sběrnice napojen
 *(Zdroj: Sběrnice.txt)*
 
 ### Otázka 43: Co je PCMCIA a kde se používá?
-*(Odpověď nebyla nalezena v prezentacích – text byl oříznut.)*
+PCMCIA (Personal Computer Memory Card International Association) je rozšiřující slot, vyskytující se především v noteboocích. Starší specifikace vycházely z architektury sběrnice ISA (16 bitů), dnes se již nepoužívají. Novější specifikace vychází z architektury sběrnice PCI (32bitová datová sběrnice), označovaná také jako CardBus. PCMCIA karty se vyznačují podporou Plug and Play (automatická detekce a instalace) a Hot swap (možností vysunout/zasunout kartu za chodu).
+
+*(Zdroj: Sběrnice.txt)*
 
 ### Otázka 44: Co je ExpressCard?
-*(Odpověď nebyla nalezena v prezentacích – text byl oříznut.)*
+ExpressCard je nástupcem řešení PCMCIA. Jedná se o hardwarové spojení dvou sběrnic – PCI Express a USB, přičemž zařízení může používat buď jednu nebo obě sběrnice současně. ExpressCard se vyznačuje vyšší datovou propustností než CardBus a podporou nových zařízení (např. TV karet pro DVB-T). Standardizována ve dvou formátech: ExpressCard/34 a ExpressCard/54 (číslo udává šířku karty v mm). Obě varianty používají stejný 34mm konektor.
+
+*(Zdroj: Sběrnice.txt)*
 
 ### Otázka 45: Jaké jsou 3 lokální sběrnice?
 1. **Procesorová** – nejrychlejší sběrnice na základní desce, slouží k přenášení dat mezi procesorem a čipovou sadou (FSB, QPI, HyperTransport).
@@ -303,16 +313,28 @@ SAS (Serial Attached SCSI) je sériové rozhraní nahrazující dřívější pa
 *(Zdroj: Rozhrani.txt)*
 
 ### Otázka 49: Jaké jsou rychlosti USB 2.0, 3.0 a 3.1?
-*(Odpověď nebyla nalezena v prezentacích – text byl oříznut.)*
+- **USB 1.1** – 12 Mb/s (resp. 1,5 Mb/s)
+- **USB 2.0** (High-speed) – 480 Mb/s
+- **USB 3.0** (Super-speed) – 4,7 Gb/s (600 MB/s)
+- **USB 3.1 Gen 1** – max. 5 Gb/s
+- **USB 3.1 Gen 2** – max. 10 Gb/s
+
+*(Zdroj: Rozhrani.txt)*
 
 ### Otázka 50: Co je USB Type-C?
-*(Odpověď nebyla nalezena v prezentacích – text byl oříznut.)*
+USB Type-C (USB-C) je fyzický typ konektoru s 24 piny, tvar podobný microUSB, s možností převrátit jej při zapojování (oboustranný). Za USB-C konektorem se může skrývat USB 3.1, Thunderbolt 3, ale i starší USB 3.0 nebo USB 2.0. Konektor samotný tedy neurčuje přenosovou rychlost.
+
+*(Zdroj: Rozhrani.txt)*
 
 ### Otázka 51: Jaké jsou parametry Bluetooth?
-*(Odpověď nebyla nalezena v prezentacích – text byl oříznut.)*
+Bluetooth je bezdrátové komunikační rozhraní definované standardem IEEE 802.15 (PAN – Personal Area Network). Pracuje v nelicencovaném frekvenčním pásmu 2,4 GHz (2,4–2,483 GHz), rozdělené na 79 komunikačních kanálů. Provádí 1600 přeskoků frekvence za sekundu (ochrana proti rušení). Třídy podle výkonu: Class 1 (10 mW, dosah ~100 m), Class 2 (2,5 mW, ~50 m), Class 3 (1 mW, ~10 m). Vybrané verze: BT 2.0/2.1 EDR – až 3 Mb/s; BT 3.0 HS – až 24 Mb/s.
+
+*(Zdroj: Rozhrani.txt)*
 
 ### Otázka 52: Co je Thunderbolt 3?
-*(Odpověď nebyla nalezena v prezentacích – text byl oříznut.)*
+Thunderbolt 3 používá konektor USB-C. Podporuje protokoly USB 3.1, USB 3.0 a starší, DisplayPort 1.2 a originální Thunderbolt. Vše běží přes rychlou interní sběrnici PCI Express 3.0. Dosahuje propustnosti až 40 Gb/s přes jediný aktivní měděný kabel – dvojnásobek oproti druhé generaci.
+
+*(Zdroj: Rozhrani.txt)*
 
 ---
 
@@ -358,7 +380,10 @@ S.M.A.R.T. (Self-Monitoring, Analysis and Reporting Technology) – technologie,
 *(Zdroj: Harddisky.txt)*
 
 ### Otázka 59: Jaký je rozdíl mezi PMR a SMR zápisem?
-*(Odpověď nebyla nalezena v prezentacích.)*
+- **PMR** (Perpendicular Magnetic Recording) – označované rovněž jako CMR (konvenční zápis). Magnetizace bitů dat svisle k rotujícímu disku. Magnetické stopy se zapisují vedle sebe, aniž by se vzájemně překrývaly. Zapisovací hlava je obvykle větší než čtecí.
+- **SMR** (Shingled Magnetic Recording – „šindelový" záznam) – magnetická stopa může překrývat část předchozí zapsané stopy, čímž se zvýší prostorová hustota. Čtení je stejně rychlé jako u PMR, ale přepsání/úprava dat je složitější – upravená data se zapíší do prázdné oblasti a původní stopa se starými daty se smaže až při reorganizaci disku v době nečinnosti. Při intenzivním přepisování může dojít k dočasnému snížení výkonu.
+
+*(Zdroj: Harddisky.txt)*
 
 ### Otázka 60: Co je NCQ?
 NCQ (Native Command Queuing) je technologie, která umožňuje zvýšit výkon pevných disků s rozhraním SATA II a novějších. Při použití NCQ pevný disk sám optimalizuje pořadí, ve kterém jsou vykonány požadavky na zápis nebo čtení. Tato optimalizace může redukovat nadbytečný pohyb hlaviček disku, čímž se zvýší rychlost přenosu dat a mírně sníží opotřebení disku.
@@ -393,4 +418,35 @@ RAMDAC je kombinace tří D/A (Digital-to-Analog) převodníků (pro každou RGB
 *(Zdroj: Grafické karty.txt)*
 
 ### Otázka 65: Co je Multi-GPU (SLI, CrossFireX)?
-*(Odpověď nebyla nalezena v prezentacích – text byl oříznut.)*
+Multi-GPU je technologie umožňující propojení více grafických karet mezi sebou za účelem zvýšení grafického výkonu. V případě 2 karet je obraz rozdělen na polovinu, každá karta renderuje přidělenou polovinu. V případě 4 karet je obraz rozdělen na kvadranty. Multi-GPU technologie je určena výhradně pro grafické karty zapojené do sběrnice PCI Express. Standard AGP nepodporuje Multi-GPU technologie.
+- **nVidia – SLI** (Scalable Link Interface) – propojení více grafických karet SLI můstkem. Všechny karty musí být stejného typu.
+- **AMD – CrossFireX** – umožňuje propojení až čtyř GPU na jedné základní desce. CrossFire lze skládat z různých modelů karet jedné série.
+
+*(Zdroj: Grafické karty.txt)*
+
+---
+
+## TÉMA 11: Zvukové karty
+
+### Otázka 66: Co byla první „zvuková karta" PC?
+*(Odpověď nenalezena v prezentacích – doplnit později)*
+
+---
+
+### Otázka 67: Co přinesla Sound Blaster (1989)?
+*(Odpověď nenalezena v prezentacích – doplnit později)*
+
+---
+
+### Otázka 68: Co je ASIO?
+*(Odpověď nenalezena v prezentacích – doplnit později)*
+
+---
+
+### Otázka 69: Jaké jsou hlavní parametry zvukových karet?
+*(Odpověď nenalezena v prezentacích – doplnit později)*
+
+---
+
+### Otázka 70: Co je EAX?
+*(Odpověď nenalezena v prezentacích – doplnit později)*
