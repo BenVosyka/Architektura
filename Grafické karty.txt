@@ -1,449 +1,0 @@
-Grafické adaptéry
-Petr Františ
-
-MDA
-• MDA (Monochrome Display Adapter)
-• Postavena na grafickém čipu 6485 od
-Motoroly.
-• Tento čip se používal už od roku 1977 pro
-zobrazování textu a grafiky v různých
-počítačových systémech i textových
-terminálech sálových počítačů.
-
-MDA
-• Karty MDA měly pouze 4 kB paměti a
-podporovaly jen zobrazování textu
-• Textové fonty jsou uloženy v paměti ROM přímo
-na grafické kartě. Pro podporu národních znaků
-proto bylo nutné vyměnit ROM
-• 80 × 25 znaků v rozlišení 720 × 350 pixelů a
-dvou barvách. Barva textu závisela na monitoru
-
-MDA
-
-MDA
-
-Schéma grafické karty
-
-MDA
-
-CGA
-• CGA (Color Graphics Adapter).
-• Umí zobrazovat i grafiku a má 16 kB paměti
-• Podporuje dva textové režimy a stejně jako
-MDA karta má znakovou sadu vypálenou v
-paměti ROM
-• 80 × 25 znaků v rozlišení 640 × 200, nebo 40 ×
-25 znaků v rozlišení 320 × 200, v 16ti pevně
-definovaných barvách
-
-CGA
-
-CGA
-• Dva grafické režimy
-– 320 × 200 pixelů bylo možné použít čtyři barvy, ale
-pouze ze dvou palet barev. Jedna obsahuje
-zelenou, červenou, hnědou a černou a druhá
-azurovou, fialovou, bílou a černou
-– Druhý grafický režim umožňoval zobrazit pouhé
-dvě barvy (z oněch šestnácti pevně určených) v
-rozlišení 640 × 200 pixelů.
-
-CGA
-
-CGA
-
-CGA
-
-CGA
-
-Hercules
-• Grafickou kartu Hercules má na svědomí pán s
-exotickým jménem Van Suwannukul. Ten
-bydlel v roce 1982 v malém kalifornském
-městečku Hercules a chtěl si napsat disertační
-práci na novém IBM PC 5150. Mělo to ovšem
-malý háček. Práci si chtěl napsat v rodné
-thajštině. To byl problém, protože IBM
-nedodávala čipy ROM s thajskou abecedou.
-
-Hercules
-• Hercules používá stejně jako karty od IBM čip
-MC6845 a je mixem MDA a CGA
-• Je plně kompatibilní se standardem MDA,
-používají se stejné monitory
-• Zvládne i emulovat grafiku CGA pomocí
-rezidentních ovladačů (ovšem bez barev)
-• Grafický režim Herculesu umožňuje zobrazení
-v rozlišení 720 × 348 a pouze černobíle.
-
-Hercules
-• Hercules kombinoval skvělý textový režim MDA (na obrazovku se
-vešlo mnohem více textu) a možnosti zobrazování grafiky CGA.
-Sice jen černobíle, ale to firemnímu použití vůbec nebránilo. Karty
-Hercules měly 64 kB paměti a znakovou sadu vypálenou v ROM.
-
-Hercules
-
-Hercules
-
-https://youtu.be/VABqGThaMkg
-
-EGA
-• EGA (Enhanced Graphics Adapter) se objevila na
-trhu s vydáním druhé generace PC od IBM v srpnu
-1984
-• Umožňuje použít monitory MDA i CGA a podporuje
-i grafické/textové režimy obou svých předchůdců
-• 80 znaků na 43 řádcích a v grafických režimech karta
-umí v rozlišení 640 × 200 + 16 barev nebo v 640 ×
-350 + 4 barvy. Maximum je pak 640 × 350 + 16
-barev
-
-EGA
-• EGA umožňuje zobrazit až 16 barev z celkem 64. Na
-PC se tedy už dalo obstojně hrát a graficky se
-konečně vyrovnalo domácím osmibitům
-• Znaková sada se načítala z ROM na kartě do paměti
-počítače a díky tomu nebylo nutné pro zobrazení v
-jiných jazycích měnit paměť ROM
-• Originální karty od IBM měly většinou jen 64 kB
-paměti. Paměť bylo možné rozšířit pomocí
-přídavného modulu (připojovaného do modrých
-konektorů) na 128/192/256 kB
-
-EGA
-
-EGA
-
-EGA
-
-VGA
-• VGA (Video Graphics Array)
-• Standard VGA je evolucí EGA a je s ním
-částečně kompatibilní stejně jako s CGA i MDA.
-Ovšem jen po softwarové stránce. Konektor DSub i změněné signály vylučují použití starších
-monitorů.
-
-VGA
-• rozlišení 720 × 400 px při podstatně
-ergonomičtější obnovovací frekvenci 70 Hz.
-• V grafický režimech je novinkou rozlišení 640 ×
-480 px v 16 barvách používané zejména v profi
-sféře (CAD apod.)
-• 320 × 200 v 256 barvách využívané zejména
-hrami.
-• Barevná paleta se výrazně rozšířila na 262 144
-barev.
-
-VGA
-Pixel = 1 byte, hodnota = index
-barvy v paletě barev
-Video RAM
-64 000 B (320 x 200)
-
-Barva 0 (3 bytes)
-
-Barva 1 (3 bytes)
-
-R
-
-R
-
-G
-
-B
-
-G
-
-B
-
-Barevná paleta
-obsahuje 256
-barev, celkem
-256 * 3 bytes
-
-Barva 255 (3 bytes)
-
-R
-
-Nakreslení 1 pixelu: [0xA000 + y * 320 + x ] = číslo barvy z palety
-
-G
-
-B
-
-VGA
-• Všechny dnešní grafické karty jsou stále kompatibilní s
-VGA. Režim VGA se používá například při bootování
-počítače, v SETUPu (BIOS) a taktéž v příkazové řádce DOSu.
-• 256 kB VRAM
-
-VGA
-
-CGA
-
-Hercules
-
-EGA
-
-VGA
-
-SVGA
-• SVGA (Super Video Graphics Array).
-• SVGA se nikdy nestal oficiálním standardem, ale
-začal se používat jako souhrnné označení všech
-karet kompatibilních s VGA, které ovšem umí
-vyšší rozlišení a mají alespoň 512 kB paměti.
-• Standard VESA sjednotil programování těchto
-karet a umožnil i softwarovou detekci vlastností
-jednotlivých karet (velikost paměti, výrobce,
-dostupná rozlišení a obnovovací frekvence).
-
-SVGA
-• Podpora VESA byla většinou zabudována přímo v BIOSu
-karty
-• VESA byla vyžadována zejména hrami – například ve hře
-Quake bez VESA 2.0 nelze použít rozlišení 640 × 480 a
-vyšší
-
-Barevné módy
-16 bitová barva
-65535 barev
-
-15 bitová barva
-32768 barev
-
-Barva (2 bytes, 16 bits)
-
-R
-
-(6bits)
-
-G
-
-(6bits)
-
-Barva (2 bytes, 16 bits)
-
-B
-
-(4bits)
-
-24 bitová barva
-True color (16,7 mil barev)
-Barva (3 bytes, 24 bits)
-
-R
-
-(8bits)
-
-G
-
-(8bits)
-
-R
-
-(5bits)
-
-G
-
-(5bits)
-
-B
-
-(5bits)
-
-32 bitová barva
-True color (16,7 mil barev)
-+ alpha kanál (průhlednost)
-Barva (3 bytes, 24 bits)
-
-B
-
-(8bits)
-
-R
-
-(8bits)
-
-G
-
-(8bits)
-
-B
-
-(8bits)
-
-A
-
-(8bits)
-
-PCI
-• Karty přesly z ISA a VL-BUS na PCI
-• Příchod 3D akcelerace
-• 3Dfx – Voodoo 1 a 2 (1996) – Tomb Raider
-640x480
-• OpenGL, DirectX
-• Riva 128 od nVidia – 1997 (AGP)
-
-GPU
-• 1998 ATI Rage 128
-• nVidia RIVA TNT2
-• nVidia GeForce 256 – podpora T&L, 4x pixel
-pipeline, dále jako Quadro pro profi trh
-• 2000 jenom ATI a nVidia
-• Radeon x nVidia
-• GPU
-
-GPU
-
-GPU
-
-RAMDAC
-• Jde o kombinaci tří D/A (Digital-to-Analog) převodníků (pro
-každou RGB složku jeden) a malé SRAM paměti pro uložení
-barevné mapy. Slouží k převodu digitálního videosignálu
-na analogový, který vyžadují CRT monitory, starší LCD
-displeje a dataprojektory. Jeho rychlost se udává v MHz a
-ovlivňuje maximální zobrazovací frekvenci při určitém
-rozlišení obrazu.
-• Čím rychleji RAMDAC pracuje, tím více obrazů se vykreslí
-na monitoru při stanoveném rozlišení. U dnešních LCD
-panelů a dataprojektorů není konverze videosignálu nutná,
-neboť přímo pracují s digitální podobou videosignálu.
-
-D-sub
-• Jedná se o starší rozhraní pro propojení grafického
-adaptéru se zobrazovací jednotkou. Nabízí pouze
-analogový výstup videosignálu přes 15 pinový
-konektor.
-• Digitální videosignál je pomocí obvodu RAMDAC
-převeden na analogový, který je následně použit na
-vykreslení obrazu prostřednictvím zobrazovací
-jednotky. Konverze videosignálu může zhoršit jeho
-kvalitu, analogový videosignál je navíc více náchylný
-na rušení.
-
-D-sub
-
-DVI (Digital Visual Interface)
-
-DVI
-• DVI-D nabízí výstup pouze digitálního videosignálu.
-Toto rozhraní je určeno výhradně pro novější LCD
-panely a dataprojektory, nelze na něj napojit přes
-redukci starší CRT monitory čí dataprojektory
-vybavené pouze analogovým vstupem.
-• DVI-I nabízí výstup jak digitálního tak i analogového
-videosignálu. Tato specifikace vznikla z důvodu
-zachování kompatibility mezi novější grafickou kartou
-s DVI rozhraním a starší zobrazovací jednotkou
-opatřenou výhradně analogovým vstupem.
-
-DVI
-
-DVI
-• Single DVI link se skládá ze 4 párů kroucené dvoulinky
-(červený, zelený, modrý a informaci o obnovovací frekvenci
-(Clock rate), přenos je 24 bitů na pixel (složka každé základní
-barvy R, G, B je kódována 8 bity).
-• Dual DVI link se navíc skládá z rezervní linky v podobě
-dalších kroucených párů pro přenos červené, zelené a
-modré složky videosignálu. V případě požadavku na přenos
-většího objemu dat (vyšší rozlišení, obnovovací frekvenci
-nebo větší počet bitů pro kódování složek RGB), tedy
-požadavek na větší šířku přenosového pásma, než stanovuje
-norma pro DVI Single link, se použije rezervní linka.
-
-HDMI
-• Jedná se o vysokorychlostní rozhraní pro přenos
-nekomprimovaného obrazového a zvukového signálu v
-digitálním formátu. HDMI podporuje přenos videa ve
-standardní nebo HD kvalitě (od specifikace HDMI 1.4 také
-3D obraz) a až 8 kanálový digitální zvuk.
-• Podporuje technologii HDCP (High-Bandwidth Digital
-Content Protection) umožňující ochranu digitálního obsahu
-ve vysokém rozlišení při jeho přenosu mezi zařízeními.
-• HDMI se dnes využívá nejen u grafických adaptérů v
-počítači, ale také u dalších zařízení spotřební elektroniky
-(např. domácí kina, Blu-Ray přehrávače, TV přijímače, atd.).
-
-HDMI
-• HDMI rozhraní je zpětně kompatibilní se standardem DVI-D.
-HDMI kabely rozdělujeme do tří skupin, které jsou označeny
-A, B a C.
-• Typ A je 19 pinový konektor a podporuje režimy SDTV a
-HDTV. HDMI A je zároveň fyzicky kompatibilní z DVI-D single
-link.
-• Typ B je 29 pinový a má oproti typu A dvakrát větší šířku
-pásma. Je možno přenášet obraz až v rozlišení WQUXGA
-(3840×2400). Je zpětně kompatibilní s DVI-D dual link.
-• Typ C (HDMI C-mini) se používá u přenosných zařízení. Má
-stejný počet pinů jako konektor A (19) a je možné ho pomocí
-redukce také na konektor A připojit.
-
-HDMI
-
-Display port
-
-Varianta mini Display port – varianta konektoru pro přenosné počítače
-
-Multi - GPU
-• Technologie umožňující propojení více grafických
-karet mezi sebou za účelem zvýšení grafického
-výkonu.
-• V případě použití 2 karet je obraz rozdělen na
-polovinu, každá grafická karta renderuje přidělenou
-polovinu obrazu.
-• V případě soustavy 4 karet je rozdělen obraz na
-kvadranty. Multi-GPU technologie je určena výhradně
-pro grafické karty zapojené do vyhrazené grafické
-lokální sběrnice PCI Express. Standard AGP
-nepodporuje Multi-GPU technologie.
-
-Multi GPU
-
-Multi GPU
-• Společnost nVidia – technologie SLI (Scalable Link
-Interface) umožňující propojení tzv. SLI můstkem více
-grafických karet v jedné základní desce tak, aby mohly
-fungovat současně. Všechny takto propojené karty musí
-být stejného typu (stejné modely). Pokud je jedna
-pomalejší, zpomalí na její úroveň všechny ostatní.
-• Společnost AMD (AMD koupila tvůrce: společnost ATI) –
-technologie CrossFireX, která umožňuje propojení až čtyř
-GPU napájených na grafické karty zapojených na jedné
-základní desce tak, aby mohly fungovat současně.
-CrossFire je možné skládat z různých verzí GPU (různé
-modely) u karet jedné série.
-
-PhysX
-• Grafické karty podporující tuto technologii využívají GPU k
-výpočtům fyzikálního modelu (náročné matematické
-výpočty) zobrazované scény (např. reálný pohyb těles
-včetně kolizí, nasvětlení, stíny, deformace, zakřivení,
-výbuchy, chování kapalin a plynů, simulace reálných
-povrchů, atd.).
-• PhysX má několik funkčních módů:
-– jedna grafická karta akceleruje grafiku i fyzikální model,
-– více grafických karet akceleruje grafiku i fyzikální model,
-– jedna grafická karta akceleruje výhradně fyzikální model,
-ostatní pouze grafiku.
-
-CUDA
-• Použití GPU k paralelním matematickým
-výpočtům
-• Specielní jazyk a překladač
-• Integrace do VisualStudia nebo pro Linux
-• Výpočty pro umělou inteligenci – hluboké
-neuronové sítě
-• Kódování a dekódování, šifrování, kryptografie
-• Specializované výpočtové karty – nVida Tesla
-
-AI
-• Umělá inteligence – výpočetní karty na bázi
-GPU pro strojové učení
-• Superpočítače sestavené z GPU
-
-
