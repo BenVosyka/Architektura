@@ -1,0 +1,40 @@
+Základní stavební kameny
+digitálních obvodů
+Petr Františ
+UO Brno K-209
+
+Základní hradla
+
+AND a OR
+
+Polovodičové AND
+
+Polovodičové OR
+
+Polovodičové NOT
+
+Polovodičové NAND
+
+Univerzální hradlo NAND
+
+Hradlo XOR
+
+Kombinační obvody
+• Tvořené základními hradly
+• Využívají boolovské algebry – binární logiky
+• Nemají vnitřní stav
+• Základem aritmeticko-logických jednotek
+
+do vyššího řádu
+
+Klopné obvody
+• Zaznamenávají stav (0/1)
+• Několik typů (S-R,D,J-K,T)
+• Tvořeny hradly
+• Základ sekvenční logiky
+
+J-K klopný obvod
+
+Posuvný registr
+
+
