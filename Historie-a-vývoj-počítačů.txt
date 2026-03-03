@@ -1,246 +1,0 @@
-Historie a vývoj počítačů
-
-Předchůdci
-• Řecko, Řím- před 5000let
-• Abakus-dřevěná, hliněná
-destička, do niž se vkládaly
-kamínky(„calculli“)
-• Počátkem 17.stol-Anglieprvní logaritmické tabulky i
-první logaritmické pravítko
-
-Mechanické kalkulátory
-• 17. stol-první mechanický kalkulátor
-Wilhelm Schickard-používal
-ozubená kolečka z hodin: +- 6ciferných čísel
-• Pascalíny-soustava ozubených kol
-s automatickým přenosem do
-vyššího řádu
-• Gottfried Wilhelm Leibnitz:+-*/
-
-Charles babbage analytical engine
-• 1883-1. stroj kde výpočetní operace
-vykonávány podle předem
-vytvořeného programu. Měl paměť a
-data s programem- zaváděny pomocí
-Jacquardových karet-děrných
-štítků(tvrdý papír s dírkami)-řízení
-tkalcovských stavů.
-• Nesestaven, moc jemná mech.
-
-První programátorka
-• V roce 1815 se v Londýně narodila
-Ada Lovelace, která je považována
-za první programátorku – zpracovala
-algoritmus pro mechanický počítač
-Charlese Babbage.
-• Posléze nicméně propadla alkoholu
-a sázení a sestavila také algoritmus
-předvídající výsledky. Zapsala se tak
-do historie i jako tvůrkyně prvního
-„škodlivého“ kódu.
-
-1890 Děrnoštítkový stroj
-• H. Hollerith-děrný štítek jako nosič dat
-• Děrný štítek obsahoval znaky ve formě
-kombinace dírek, umožňoval data uchovat
-• Sčítání lidu
-
-IBM
-• Vznik 1911
-• 1928 první kalkulačka co uměla odečítat
-• 1943 Vacuum Tube Multiplier – první elektronicky
-stroj provádějící aritmetické operace
-
-IBM
-• Výroba počítače IBM v roce 1948
-
-Nultá generace
-• elektromechanické počítače, využ. relé.,
-kmitočet cca 100Hz
-• Konrad Zuse-1938 první počítač na světě Z1
-• Program na kinofilmu, paměť-16 č.
-• Z2-200 relé, stále mech. paměť
-• Z3- 2600 r., 1.prakticky použ., dvojková
-aritmetika, 64 č. po 22 bitech, 50 op/m
-
-Mark I,II
-
-• Howard Aiken- ASCC- Mark I-10soustava
-• 2 části paměti- statická 60 dvacetitřímístných
-čísel, a dynamickou 72
-• + 0,3s, * 6s, sin 1minuta
-• Mark II- čistě reléový, 13000relé
-• op. paměť až na 100 čísel, + 0,125, * 0,25
-
-Nultá generace
-• Colossus-angl. k lámání německých šifer
-• SAPO-7000relé, 400elektronek,
-magnetická bubnová paměť
-• 2ová soustava
-• 5ti adresový
-• 3 paralerně prac. poč.
-• výsledek na základě hlas.
-
-První generace
-• Eniac-1. elektronkový, monstrum, nízký
-výkon, 18000ele, 10 000kond., 7000 rez,
-1300r, 2 letecké motory, 40t,
-• Maniac-(Mathematical Analyser Numerical Integrator And
-Computer) John von Neuman- výroba
-Hbomby
-
-Eniac
-
-• 12. února 1946
-• 18 000 elektronek a jeho vývoj stál 500 000
-dolarů.
-• Ve své elektronické paměti o objemu 200 bytů
-byl s to uložit 20 desetimístných čísel a
-zpracovat je rychlostí 100 kilohertzů za vteřinu.
-• Zabíral úctyhodných 63 metrů čtverečních.
-Vstup i výstup obstarávaly děrné štítky a tisk
-se prováděl na specializovaném stroji.
-
-Eniac
-
-• poměrně poruchový, téměř každý den vyhořelo
-několik vakuových elektronek.
-• Traduje se, že když byl zapojen, pouliční světla
-města Filadelfie slabě poblikávala, protože
-spotřebovával většinu energie. K závadám
-docházelo nejčastěji při zapínání nebo vypínání
-počítače, částečně je odstranil nepřetržitý
-provoz.
-• Do jeho modifikace v roce 1948 zabíralo
-odstraňování závad až polovinu užitného času.
-
-IBM
-
-IBM
-
-Druhá generace
-• vynález tranzistoru=> menší, rychlejší,
-spolehlivější, méně energie
-• 1951-UNIVAC- 1. sériově vyráběný
-• začínají vznikat operační syst. a prog.
-jazyky- např. COBOL a FORTRAN
-
-Třetí generace
-• 1958- Jack Kilby- sdružení více
-tranzistrorů v jednom čipu-integrovaný
-obvod(4tranz.)
-• poč. od 3.gen.-základ integrované obvody
-• stupně integrace-SSI - Small Scale
-Integration, MSI, LSI, VLSI
-
-Čtvrtá generace
-• začala v r. 1981- vznik PC (firma IBM) a trvá
-dodnes
-• Obsah. integrované obvody střední a velké
-integrace, malé rozměry, velká rychlost a
-velká kapacita paměti. Odtud název
-mikroprocesor
-• Pátá generace: hudba budoucnosti, někdy
-popis. jako stroje s UI nebo kvantové
-počítače
-
-IBM PC – 5150 (rok 1981)
-
-• 1963- první počítačová myš
-• 1964- vznikl BASIC
-• 1965-Gordon Moore tvrdí, že počet transistorů ,
-který lze vměstnat na procesor, se bude
-zdvojnásobovat každý rok
-• 1967-A Shugart-disketovou jednotku(8p)
-• 1968-založen INTEL, 1.statické paměti RAM,
-první kapesní kalkulačky
-• 1969-Americké ministerstvo obrany zřizuje
-ARPAnet, předchůdce internetu
-• 1970-vznikl první mikroprocesor (INTEL)
-• 1971-INTEL-4bitový mikroproc. 4004 a (8) 8008
-
-• 1972-1000 tranz. na jeden čip, první milion
-kalk. SHARP ELSI-8, Ray Tomlinson
-posílá první e-mail
-• 1975 -Bill Gates a Paul Allen zakládají
-společnost Microsoft, Stephen Wozniak a
-Steve Jobs-v garáži první počítač Apple 1
-a zakl. Apple Computers
-• Altair zhotovil první osobní počítač - byla to
-stavebnice -Altair 8800
-• 1979-Firma Atari uvádí na trh svůj první
-počítač pro děti a počítačové hry
-
-• 1980-Cleve Sinclair legendární počítač ZX
-– 80, Intel-jednočipové počítače 8051 a
-8751
-• 1981-IBM-1. IBM PC s operačním
-systémem MS-DOS
-• 1982-v USA Commodore C – 64-nejprodav
-• 1984-1. CDROM; HP Laser Jet
-• 1985-Microsoft-Windows 1.0,
-• Intel-32 bitový mikroprocesor
-• Intel 386
-
-• 1990- 64 bitový Intel 80860, Windows 3.0
-• 1991-procesor Intel 486
-• 1992- 2rychlostní CDROM, Windows 3.1
-• 1993-pátá řada mikroprocesorů Intel
-nazvaná Pentium
-• 1995-procesor Intel Pentium Pro 200 MHz,
-Windows 95
-• 1997-procesor Intel Pentium II
-• 1998-Windows 98, Celeron
-
-Strategic Automated Command and Control
-System (SACCS)
-• koordinuje operační funkce amerického
-jaderného arzenálu. Jsou mezi nimi jak
-mezikontinentální balistické střely, tak
-strategické bombardéry. Přes něj
-komunikují jednotlivá jaderná střediska
-v USA a vysílají zprávy směrem
-k pozemním
-
-John von Neumann
-Američan maďarského původu
-1945 – stanovil základní principy pro fungování jakéhokoliv počítače
-
-1. Počítač používá dvojkovou soustavu.
-2. Je řízen centrem, které vykonává
-příkazy dle nějakého programu.
-3. Program a data musí být v paměti
-počítače.
-4. Sám je univerzální, ale používá
-speciální programy.
-
-29
-
-von Neumannovo schéma počítače
-VSTUP
-
-PAMĚŤ
-
-VÝSTUP
-
-ALJ
-
-(Aritmeticko Logická
-Jednotka)
-
-PROCESOR
-
-ŘADIČ
-
-ALJ – si z paměti vybírá
-příkazy programu
-a vykonává je. Při jejich
-vykonávání může
-z paměti vybírat i další
-údaje (data) a může do
-paměti i zapisovat.
-řadič – koordinuje činnost
-30
-celého systému
-
-
