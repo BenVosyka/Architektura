@@ -1,0 +1,218 @@
+Podpůrné obvody CPU
+Petr Františ
+
+Komunikace procesoru s okolím
+• Obvody umožňující komunikaci procesoru s
+okolím, zahrnujeme do tzv. podpůrných
+obvodů, které jsou součástí čipové sady
+základní desky
+
+Podpůrné obvody
+• kanály přímého přístupu k operační paměti
+(DMA)
+• požadavky přerušení (IRQ)
+• adresy paměti - adresy vstupně/výstupních
+portů
+• sběrnice (fyzické, vodivé propojení obvodů )
+
+Podpůrné obvody CPU
+• Úkolem podpůrných obvodů procesoru je
+a) maximálně urychlit komunikaci procesoru s
+obvody základní desky počítače a s připojenými
+periferními zařízeními,
+b) odlehčit procesoru při vykonávaní některých stále
+se opakujících rutinních operací
+c) zastoupit procesor při některých činnostech.
+
+Podpůrné obvody CPU
+• Dále to jsou obvody nezbytné pro chod a
+řízení procesoru a jiných sekvenčních obvodů.
+Všechny tyto obvody jsou integrovány v čipové
+sadě základní desky. S každým novým
+procesorem se vyvíjí nová čipová sada s
+parametry pro maximálně účinnou podporu
+procesoru. Kvalita čipové sady má konečný vliv
+na výkon celého počítače.
+
+Řadiče
+• Řadiče jsou výkonové obvody, které na základě
+zpracovaných instrukcí generují řídící signály a
+tím řídí určitou část počítače. Pracují jako
+podpůrné obvody CPU (DMA, IRQ) nebo jako
+překladače mezi CPU a periferním zařízením
+(řadič disků, klávesnice, síťová karta, grafická
+karta, zvuková karta, atd.) Řadiče jsou
+integrovány na základní desce nebo jsou ve
+formě přídavné desky.
+
+Hlavní funkce řadičů
+• oddělují hardware od software
+• vzájemně přizpůsobují rychlost zpracování dat
+mezi jednotlivými obvody pracující různou
+rychlostí
+• převádějí data z formátu CPU na formát
+používaný přídavným zařízením
+• případně zesilují elektrické signály
+
+• Mezi podpůrné obvody řadíme:
+– Generátor hodin, systémový budič, systémový
+časovač, řadiče pamětí, řadič přímého přístupu k
+paměti DMA, řadič přerušení IRQ.
+
+• Jako překladače pracují:
+– Řadiče rozhraní COM, LPT, USB, řadiče disků IDE,
+EIDE, SCSI, SATA, RAID, řadič grafické karty, atd.
+
+Řadič DMA (Direct Memory Access)
+• Řadič DMA je realizován obvodem Intel
+8237A. Umožňuje periferním zařízením přímý
+přístup do operační paměti bez účasti CPU.
+• Řadič DMA provádí 2 typy operací:
+– přenos dat z OP do periferních zařízení
+– přenos dat z periferních zařízení do OP (popsáno
+níže v principu činnosti DMA)
+
+Řadič DMA
+
+Řadič DMA
+• Při DMA přenosu se na sběrnici střídají cykly
+procesoru a cykly DMA řadiče. Pro střídání procesoru
+a DMA řadiče na sběrnici lze použít různá pravidla:
+• Kradení cyklů - Jedním ze základních způsobů
+přidělování sběrnice DMA řadiči. DMA řadič v případě
+požadavku na přenos obsadí sběrnici a provede jeden
+elementární přenos dat. Potom sběrnici opět uvolní.
+Na sběrnici se tak střídají přenosové cykly procesoru a
+přenosové cykly DMA řadiče.
+
+Kradení cyklů
+
+Blokový režim
+• Blokový režim (Burst Mode) - Při extrémních
+požadavcích na rychlost přenosu lze přidělování
+sběrnice řešit tak, že DMA řadič obsadí sběrnici na
+začátku blokového přenosu a v průběhu celého
+blokového přenosu ji drží obsazenou. Tímto
+způsobem lze zvýšit rychlost přenosu v porovnání s
+technikou kradení cyklů, protože odpadají zpoždění
+potřebná k přidělení sběrnice před každým
+elementárním přenosem. Procesor je však po celou
+dobu blokového přenosu ve stavu HOLD.
+
+Blokový režim
+
+DMA
+• Použití DMA řadiče je vhodné pro přenosy
+blokového charakteru, u kterých je kladen
+důraz na velkou rychlost. Příkladem mohou
+být připojení diskových pamětí, zvukových
+karet, rychlých síťových karet apod.
+
+Řadič přerušení IRQ (Interrupt ReQuest)
+• Označuje signál, kterým požádá zařízení (např.
+klávesnice, časovač atd.) procesor o věnování
+pozornosti, tedy požádá o přerušení
+probíhajícího procesu (vykonávání sledu
+instrukcí) za účelem provedení obsluhy
+požadavku.
+
+Řadič přerušení
+• jeho úkolem je zajistit synchronizaci programu
+probíhajícího v CPU s požadavky na obsluhu od
+vnějších zařízení. Řadič přerušení má určitý počet
+IRQ vstupů, přes které vstupují do registru
+požadavků žádosti periferních zařízení.
+• Některé vstupy jsou fixně použity systémovými
+zařízeními (systémový časovač, koprocesor,
+klávesnice, myš, atd.), ostatní jsou pak k dispozici a
+mohou být využity rozšiřujícími kartami (modem,
+zvuková karta, síťová karta, řadiče disků, atd.)
+
+Řadič přerušení
+• Požadavky s nejnižším číslem mají nejvyšší
+prioritu. (např. klávesnice má žádost přerušení
+č.1, tedy druhá nejvyšší priorita).
+• Řadič obsahuje obvody prioritního rozhodování,
+které vybírají požadavek s nejvyšší prioritou.
+• Po vybrání požadavku se spustí inicializační fáze
+a po ní následuje spolupráce s CPU. Řadič IRQ
+„hlídá“ stav periferních zařízení, sám je
+neobsluhuje.
+
+Řadič přerušení
+• U současných počítačů je v čipové sadě
+integrován řadič přerušení APIC (Advanced
+PIC), který byl původně určen pouze pro
+víceprocesorové systémy a nabízí více IRQ
+vstupních linek než 16. Je rychlejší než
+předchozí obvod a umožňuje, aby více zařízení
+sdílelo jednu IRQ vstupní linku.
+
+Obsluha přerušení
+1.Vnější zařízení vyvolá požadavek o přerušení (např. při stisku klávesy, pohybem myši, atd.). Požadavek
+vstupuje do řadiče přerušení pomocí linky IRQ.
+2. IRQ 2 slouží u počítačů PC AT se sběrnicí ISA ke zpřístupnění IRQ 8 - IRQ 15. BIOS počítače pak ví, že musí
+zjistit, které z vyšších přerušení je skutečně aktivní, a to obsloužit.
+3.Řadič přerušení vybere požadavek s nejvyšší prioritou a vygeneruje signál INTR („někdo“ žádá o
+přerušení) a vyšle ho k procesoru. Zároveň dochází k inicializaci řadiče. Do jeho datového registru se
+zapíše typ přerušení a ukazatel do tabulky vektorů.
+4.Procesor dokončí rozpracovanou instrukci a začne vysílat potvrzovací signál INTA, čím se dotazuje, jaké
+zařízení žádá o přerušení.
+5. Řadič přerušení identifikuje zařízení, které žádá o přerušení a odešle po datové sběrnici 8-bitové číslo
+typu přerušení k procesoru.
+6. Procesor uloží obsah svých registrů (právě zpracovávané instrukce) do zásobníku.
+7. Procesor zpracuje typ přerušení (instrukci) a na základě vyhodnocení vyšle po adresové sběrnici adresu
+místa v paměti, na kterém se nachází údaj (vektor), který ukáže na příslušný obslužný program v
+operační paměti.
+8.Vyhledá obslužný podprogram obsluhy přerušení v paměti a vykoná ho (provede obsluhu přerušení).
+9. Po provedení obslužného programu opět obnoví původní obsah registrů ze zásobní- ku a přerušený
+program pokračuje dál. Cyklus přerušení končí vynulováním registru požadavků.
+
+Obsluha přerušení
+
+Přerušení
+
+Typy přerušení
+• Vnější přerušení (též hardwarové přerušení) je označováno podle
+toho, že přichází ze vstupně-výstupních zařízení (tj. z pohledu
+procesoru přicházejí z vnějšku).
+• Vnitřní přerušení vyvolává sám procesor, který tak signalizuje
+problémy při zpracování strojových instrukcí a umožňuje operačnímu
+systému na tyto události nejvhodnějším způsobem zareagovat. Jedná
+se například o pokus dělení nulou, porušení ochrany paměti
+• Softwarové přerušení je speciální strojové instrukce (obvykle je jich v
+procesoru k dispozici několik). Tento typ přerušení je na rozdíl od
+předchozích dvou typů vyvoláno zcela záměrně umístěním příslušné
+strojové instrukce přímo do prováděného programu. Instrukce
+softwarového přerušení bývá využívána pro vyvolání služeb
+operačního systému z běžícího procesu.
+
+Adresy paměti
+• Adresování operační paměti je spojeno s jejím logickým
+rozvržením a režimem práce procesoru. Základní oblasti
+systémové paměti jsou
+– konvenční (základní) paměť
+– horní oblast paměti (Upper Memory Area - UMA)
+– vysoká oblast paměti (High Memory Area – HMA)
+– rozšířená paměť (Extended Memory – XMS)
+– expandovaná paměť (Expanded Memory – EMS)
+– rezervovaná oblast pro grafickou kartu - rezervovaná oblast
+pro ROM rozšiřujících karet - rezervovaná oblast pro ROM
+BIOS základní desky
+
+Adresy v paměti
+
+Adresy vstupně/výstupních portů
+• Adresy vstupně/výstupních portů umožňují vzájemnou
+komunikaci mezi hardwarovým zařízením a softwarem.
+Pokud se například posílají data na sériový port, musí se
+vědět, na které adrese tento port data přijímá. Každý
+vstupně/výstupní port má přiřazenou svou adresu. Těchto
+adres může systém přiřadit 65 536. Některá zařízení používají
+více než jednu adresu. Z hlediska softwaru platí, že s různými
+zařízeními sytému komunikují především různé ovladače
+zařízení. To znamená, že ovladače zařízení musí vědět, která
+vstupně/výstupní adresa je využívána daným zařízením. Tyto
+adresy se nacházejí v konvenční části operační paměti.
+
+

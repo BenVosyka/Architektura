@@ -1,0 +1,294 @@
+Procesory
+Petr Františ
+
+Úvod
+• Procesor je ústřední výkonnou jednotkou
+počítače, která čte z paměti instrukce a na
+jejich základě vykonává program.
+• Primárním úkolem procesoru je řídit činnost
+ostatních částí počítače včetně vlastních
+jednotek a provádět matematické a logické
+operace s operandy (čísla ve dvojkovém
+vyjádření) na základě instrukcí.
+
+Úvod
+• Protože procesor, který by vykonával program zapsaný v
+nějakém vyšším programovacím jazyku by byl příliš
+složitý, má každý procesor svůj vlastní jazyk - tzv.
+strojový kód.
+• Ten se podle typu procesoru skládá z jednodušších
+nebo složitějších instrukcí, které jsou řadičem procesoru
+přeloženy (dekódovány) na tzv. mikroinstrukce, pomocí
+kterých jsou řízeny ostatní části procesoru a počítače.
+• Instrukce, které dokáže procesor rozpoznat a zpracovat
+pak tvoří tzv. instrukční sadu procesoru.
+
+Typy procesorů
+• MCU (Micro Controller Unit) - nejjednodušší skupina procesorů, tzv.
+mikrořadiče, jejichž uplatnění je velmi široké, od běžné spotřební
+elektroniky až po výkonné počítače. Mezi výhody těchto čipů patří nízká
+cena, malé rozměry a nízká spotřeba energie. Tyto procesory jsou
+vyráběny pro přesně určenou specifickou činnost a mají jen malou
+možnost rozšíření. Rovněž ve výkonnosti nedosahují vysokých hodnot.
+• CPU (Central Processor Unit) - tvoří základní řídící jednotku počítače.
+Oproti předcházející skupině mají mnohem vyšší výkon, větší rozměry, je
+možné je díky jejich otevřené architektuře a velkému množství vyvedených
+signálů lépe rozšiřovat. Samozřejmě tyto výhody jsou zaplaceny vyšší
+spotřebou a ztrátovým výkonem, rovněž cena je vyšší než v předchozím
+případě.
+
+Typy procesorů
+• DSP (Digital Signal Processor) - je určitým kompromisem mezi
+oběma předcházejícími skupinami procesorů. Signálové
+procesory se většinou vyznačují vysokým výkonem v oblasti
+zpracování matematických výpočtů a schopností zpracovávat
+velké objemy dat. Součástí těchto procesorů jsou často i
+digitálně-analogové a analogově-digitální převodníky. DSP se
+používají například v oblasti měřící techniky (digitální
+osciloskop, atd.), ve zvukových kartách, atd.
+• NPU (Network Processors Units) - jsou nedílnou součástí všech
+přepínačů, směrovačů a dalších síťových zařízení. Vedoucí
+pozici ve výrobě síťových procesorů má společnost Broadcom.
+
+Typy procesorů
+• GPU (Graphic Processors Units) – jedná se o speciální
+procesory, které jsou součástí grafických karet a
+moderních procesorů. Jejich úkolem je řídit zpracování
+obrazových dat a výpočty fyzikálního modelu 3D scény.
+Program i data jsou uloženy buď v operační paměti nebo
+paměti grafické karty.
+• APU (Accelerated Processing Unit) – nazývá se tak čip, do
+kterého je v jednom pouzdře integrováno jádro (nebo
+jádra) CPU a GPU, tedy jak centrální procesorové, tak
+grafické jednotky. Jedná se o současné moderní procesory
+v osobních i přenosných počítačích.
+
+Rozdělení procesorů
+• Podle instrukční sady
+– CISC (Complex Instruction Set Computer) – jedná se o procesor
+s velkou sadou instrukcí. Instrukční sada je rozšířena o nové a
+složitější instrukce tak, aby pro celou operaci stačilo načtení
+jen jediné instrukce z paměti. Zjednodušeně řečeno platí, že na
+každou operaci bude existovat odpovídající instrukce.
+– RISC (Reduced Instruction Set Computer) – jedná se o procesor
+s redukovanou instrukční sadou. Instrukční sada obsahuje
+pouze jednoduché a nejčastěji používané instrukce. Instrukcí se
+provádí během jednoho strojového cyklu. Mikroinstrukce jsou
+hardwarově implementovány v procesoru, čímž je velmi
+výrazně zvýšena rychlost jejich provádění.
+
+Rozdělení procesorů
+• Podle šířky operandu v bitech (resp. šířka
+slova)
+– Jedním ze základních ukazatelů procesoru je počet
+bitů, tj. šířka operandu, který je procesor schopen
+zpracovat v jednom kroku. Zjednodušeně se dá
+říci, že např. osmibitový procesor umí počítat s
+čísly od 0 do 255, 16bitový s čísly od 0 do 65535
+atd.
+
+Rozdělení procesorů
+• Podle šířky operandu v bitech (resp. šířka slova)
+– 4-bitové, 8-bitové procesory – určené pro velmi
+jednoduché aplikace (spotřební elektronika, domácí
+spotřebiče, kalkulačky, jednodušší periferní zařízení,
+atd.)
+– b) 16-bitové procesory – určené pro středně složité
+aplikace (programovatelné automaty, mobilní telefony,
+PDA, přenosné videohry, atd.)
+– c) 32-bitové, 64-bitové procesory – určené pro velmi
+
+Rozdělení procesorů
+• Podle výrobce procesoru
+– Na poli procesorů pro osobní počítače dominují v
+současnosti pouze dva výrobci – firma INTEL a
+AMD. Existuje však spousta dalších výrobců
+procesorů určených pro jiné aplikace než osobní
+počítače – firmy MOTOROLA, ATMEL, NexGen,
+Texas Instruments, Broadcom, IBM, atd.
+
+Významné parametry procesoru
+• Rychlost procesoru – jedná se především o frekvenci
+jádra procesoru odvozenou od generátoru hodinových
+impulsů, který je řízen krystalovým oscilátorem
+umístěným na základní desce (zjednodušeně řečeno: 1
+takt = 1 činnost vykonaná procesorem). Udává se v [Hz],
+resp. [MHz], [GHz]. Procesor je prostřednictvím patice
+(socket) připojen k lokální procesorové sběrnici (FSB, QPI,
+popř. HyperTransport), pomocí níž komunikuje s čipovou
+sadou a tedy s ostatními částmi počítače. Frekvence
+procesoru je pak dána násobkem frekvence této
+procesorové sběrnice.
+
+Významné parametry procesoru
+• MIPS (Milion Instructions Per Second) jednotka označující počet instrukcí vykonaných
+procesorem za jednu sekundu v násobku
+miliónů.
+• FLOPS (Floating Point Operations Per Second) jednotka označující počet operací s čísly v
+pohyblivé řádové čárce (reálná čísla) za jednu
+sekundu.
+
+Významné parametry procesoru
+• Šířka slova – šířka vnitřní datové sběrnice v
+bitech. Neboli, jak velké číslo dokáže procesor
+zpracovat během jedné operace. Podle šířky
+datové sběrnice se říká, že procesor je 8bitový, 16-bitový, 32-bitový, 64-bitový
+• Napájecí napětí jádra procesoru
+
+Významné parametry procesoru
+• TDP (Thermal Design Power) – tepelný výkon
+procesoru. Jednotkou je watt [W]). AMDudává TDP
+jako maximální dosažitelný tepelný výkon, INTEL jako
+typický, tedy dosažitelný při pracovní zátěži
+procesoru.
+• Patice (Socket) – slouží k uchycení procesoru na
+základní desce. Některé jednodušší procesory jsou
+strojově připájeny k základní desce bez možnosti
+pozdější výměny. Jednotlivé patice nejsou ve většině
+případů vzájemně kompatibilní (zaměnitelné).
+
+Významné parametry procesoru
+• Počet fyzických jader uvnitř procesoru – více
+fyzických jader procesoru umožňuje paralelní
+zpracování instrukcí a dat během jednoho
+hodinového taktu. Výrazně zvyšuje výkon
+procesoru, pokud paralelní zpracování
+podporuje operační systém a programová
+aplikace. (jádro = core)
+• Instrukční sada – CISC, RISC, EPIC
+
+Instrukční sada
+• CISC (Complex Instruction Set Computer)
+– Počítač s kompletní instrukční sadou
+– Obsahuje i instrukce, které se používají velice málo
+– S ohledem na velký počet instrukcí bývá procesor
+složitý a drahý
+
+• RISC (Reduced Instruction Set Computer)
+– Obsahuje malý počet instrukcí, které se provádějí velice
+rychle
+– Složitější operace se provádějí pomocí většího počtu
+jednodušších instrukcí
+
+Významné parametry procesoru
+• Velikost vyrovnávací paměti (cache paměť) –
+uvnitř procesoru je umístěna vyrovnávací statická
+paměť RAM, která urychluje komunikaci rocesoru
+s operační pamětí. Jde v podstatě o velmi rychlý
+paměťový zásobník, určený k dočasnému ukládání
+dat a instrukcí, které bude procesor s největší
+pravděpodobností požadovat. Vyrovnávací paměť
+procesoru bývá obvykle dvoustupňová (u
+některých procesorů třístupňová).
+
+Významné parametry procesoru
+
+• První stupeň (L1) paměti cache má malou kapacitu (řádově desítky kB), je přímo
+součástí procesoru a je stejně rychlá jako vlastní procesor. Dělí se na instrukční a
+datovou cache. Slouží k ukládání právě zpracovávaných instrukcí a dat v
+procesoru.
+• Druhý a třetí stupeň (L2, L3) paměti cache je pomalejší, ale s větší kapacitou
+(řádově jednotky MB), je mezi L1 cache a operační pamětí (dnes se již umisťuje
+do pouzdra společně s jádrem procesoru). Obsahuje data a instrukce, které
+procesor aktuálně nepoužívá, ale pravděpodobně bude potřebovat.
+
+Základní části procesoru
+
+Základní části procesoru
+• Řadič (CU – Control Unit)
+– Je aktivní částí procesoru. Jeho úkolem je řídit
+pořadí, v němž jsou prováděny instrukce
+programů, dekóduje instrukce, vysílá do ostatních
+části počítače a procesoru řídící signály, čímž
+instrukce provádí.
+
+Řadič
+Princip činnosti:
+• Po zapnutí počítače nebo restartu se RAI nastaví na výchozí hodnotu a na
+výstupu RAI se objeví kódové číslo adresy paměťového místa OP s první
+instrukcí.
+• Toto místo se připojí na datovousběrnici a instrukce se přenese do řadiče
+CPU. Zapíše se do RI. Doba zápisu stačí k tomu, aby se kódovaná instrukce
+dekódovala v DI. Dekódováním se vygenerovala vnitřní adresa pro spuštění
+• mikrokódu a generují se řídící signály.
+• Je-li instrukce ukončena nebo vyžadují-li se data k vykonání instrukce, vyšle
+GŘI impuls do RAI, obsah RAI se zvýší o 1 a na výstupu se objeví kód nové
+adresy s následující instrukcí nebo daty. Příslušná paměťová buňka se zase
+napojí na datovou sběrnici a celý proces se opakuje.
+• V programu můžeme provádět skoky tím, že příslušnou instrukcí (např.go to)
+zvýšíme obsah RAI o více než 1.
+
+Základní části procesoru
+
+ALU
+• Operační blok – zpracovává operandy přiváděné na dva vstupy a
+výsledek se předává jedním výstupem k dalšímu zpracování.
+• Střadač – je registr, v němž se uchovávají data – 1. operand,
+mezivýsledky, výsledky.
+• Registr příznaků – stavový registr. Skládá se z řady jednobitových
+pamětí, ve kterých je uložena 0 nebo 1, podle výsledků. Obsah
+stavových registrů kontroluje řadič, který na ně příslušně reaguje.
+• Nejčastější příznaky:
+– · CARRY (příznak přenosu) – signalizuje přeplnění střadače – přenos do
+vyššího řádu.
+– · ZERO (příznak nuly) – nastaví se na hodnotu 1 je-li výsledek operace nula.
+– · SIGN (signum) – příznak znaménka (+,-)
+
+ALU
+• Princip činnosti ALU
+• Činnost ALU je řízena řadičem na základě instrukcí přijatých z OP. ALU
+pracuje ve většině případů na základě jednoadresových instrukcí. Chceme-li
+např. sečíst dvě čísla, musíme k tomu uvést více než jednu instrukci. CPU
+potřebuje znát:
+– adresu prvního sčítance
+– adresu druhého sčítance
+– adresu, kde se uloží výsledek
+
+• U počítačů s jednoadresovými instrukcemi se první sčítanec načte do
+střadače, odtud do operačního bloku na první vstup a druhý sčítanec se další
+instrukcí načte přímo z operační paměti na druhý vstup operačního bloku.
+• Výsledek se uloží do střadače. Ze střadače se další instrukcí výsledek uloží na
+příslušnou adresu v OP.
+
+Registry
+• Malé úložiště dat umístěné v CPU, jeho obsah
+lze načíst rychleji než data uložená operační
+paměti
+• Velikost registrů bývá zpravidla stejná jako
+velikost slova procesoru nebo jeho násobku
+• Slouží jako parametry instrukcí procesoru
+
+Registry
+16-ti bitový režim práce (reálný mód x86)
+
+Registry
+32-bitový režim práce (chráněný mód x86)
+
+Instrukce
+• Přesunové - přesun dat mezi registry nebo
+mezi RAM a registry
+• Aritmetické – sčítání, odčítání, dělení,
+násobení
+• Logické – bool algebra, rotace, posuvy
+• Skoku – rozhodovací příkazy
+• Vstupně výstupní – pro práci s perifériemi
+• Ostatní – řídící, speciální
+
+Instrukce
+• MOV EAX,5
+; do EAX nahrajeme číslo 5
+• MOV EBX,3
+; do EBX nahrajeme číslo 3
+• ADD EAX,4
+; přičteme k EAX 4, čili EAX =
+5+4 = 9
+• SUB EAX,EBX
+; od EAX odečteme hodnotu
+EBX, EAX = 9-3 = 6
+• INC EAX
+; EAX = 6+1 = 7, pozor! tato
+DEC EBX
+; zmenšíme o jedničku EBX,
+EBX bude 2
+
+
