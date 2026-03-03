@@ -22,7 +22,7 @@
 
 **Otázka 5: Co je virtualizace paměti a k čemu slouží?**
 
-> *Odpověď:*
+> *Odpověď:* Virtualizace paměti je technika, při které má každý proces svůj vlastní virtuální adresový prostor (u 32-bit systému 4 GB – 2 GB systém + 2 GB aplikace). Manažer virtuální paměti převádí virtuální adresy na fyzické pomocí stránkování – paměť je rozdělena na stránky (4 kB u x86). Každý proces má adresář stránek (1024 položek), odkazující na tabulky stránek, které odkazují na fyzické stránky. Pokud stránka není ve fyzické paměti, dojde k výpadku stránky (page fault) a systém ji načte ze stránkovacího souboru. Slouží k efektivnímu využití RAM, ochraně paměti mezi procesy a umožnění běhu programů větších než fyzická paměť.
 
 ---
 
