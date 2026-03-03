@@ -1,0 +1,80 @@
+TÉMA 1: Úvod (Von Neumann, Hardware) 
+Otázka 1 Co je základní myšlenka Von Neumannovy architektury? 
+Otázka 2 Jaké jsou hlavní součásti CPU podle Von Neumanna? 
+Otázka 3 Jaký je hlavní rozdíl mezi Von Neumannovou a Harvardskou architekturou? 
+Otázka 4 Co umožňuje 64-bitový systém oproti 32-bitovému? 
+Otázka 5 Co je virtualizace paměti a k čemu slouží? 
+TÉMA 2: Čipová sada 
+Otázka 6 Co je čipová sada (chipset) a k čemu slouží? 
+Otázka 7 Jaké jsou dva hlavní obvody v architektuře mostů? 
+Otázka 8 Co zajišťuje Northbridge? 
+Otázka 9 Co je FSB a k čemu slouží? 
+Otázka 10 Jaký je rozdíl mezi QPI a FSB? 
+TÉMA 3: Paměti obecně 
+Otázka 11 Jaké jsou hlavní 3 druhy pamětí podle pohledu na médium? 
+Otázka 12 Co je rozdíl mezi RAM a ROM z hlediska zápisu? 
+Otázka 13 Jaký je rozdíl mezi EPROM a EEPROM? 
+Otázka 14 Co je Flash ROM a kde se používá? 
+Otázka 15 Co je SLC, MLC, TLC, QLC u Flash pamětí? 
+TÉMA 4: Polovodičové paměti 
+Otázka 16 Jaký je rozdíl mezi SRAM a DRAM?
+Otázka 17 Proč DRAM potřebuje refresh?
+Otázka 18 Jaké jsou hlavní rozdíly mezi DDR generacemi (DDR, DDR2, DDR3, DDR4, DDR5)? 
+Otázka 19 Co je Dual Channel a jak funguje? 
+Otázka 20 Co je DIMM a kolik má pinů? 
+TÉMA 5: Podpůrné obvody CPU 
+Otázka 21 Co je DMA a k čemu slouží? 
+Otázka 22 Jaké jsou dva režimy práce DMA? 
+Otázka 23 Co je IRQ a k čemu slouží? 
+Otázka 24 Jaký má IRQ má nejvyšší prioritu? 
+Otázka 25 Vyjmenuj fáze obsluhy přerušení (zjednodušeně). 
+TÉMA 6: Procesory Otázka 26 Co je ALU a co dělá? 
+Otázka 27 Co je Řadič (CU) a jaká je jeho funkce? 
+Otázka 28 Jaký je rozdíl mezi CISC a RISC? 
+Otázka 29 Co je pipelining? 
+Otázka 30 Co je superskalární architektura? 
+Otázka 31 Co je SIMD? 
+Otázka 32 Co je CACHE paměť a jaké má úrovně? 
+Otázka 33 Co je FPU? 
+Otázka 34 Co je TDP u procesorů? 
+Otázka 35 Co je Multi-Core? 
+TÉMA 7: Sběrnice 
+Otázka 36 Co je sběrnice a jak jsou uspořádány v PC? 
+Otázka 37 Jak se vypočítá přenosová rychlost sběrnice? 
+Otázka 38 Jaký je rozdíl mezi paralelní a sériovou sběrnicí?
+Otázka 39 Co je PCI sběrnice a jaké má parametry? 
+Otázka 40 Jaké jsou výhody PCI Express oproti PCI? 
+Otázka 41 Kolik linků má PCIe x16 a jaká je rychlost PCIe 4.0 x16? 
+Otázka 42 Co je AGP a k čemu sloužilo? 
+Otázka 43 Co je PCMCIA a kde se používá? 
+Otázka 44 Co je ExpressCard? 
+Otázka 45 Jaké jsou 3 lokální sběrnice? 
+TÉMA 8: Rozhraní 
+Otázka 46 Jaký je rozdíl mezi PATA a SATA? 
+Otázka 47 Co je eSATA? 
+Otázka 48 Co je SAS a kde se používá? 
+Otázka 49 Jaké jsou rychlosti USB 2.0, 3.0 a 3.1? 
+Otázka 50 Co je USB Type-C? 
+Otázka 51 Jaké jsou parametry Bluetooth?
+Otázka 52 Co je Thunderbolt 3? 
+TÉMA 9: Pevné disky 
+Otázka 53 Jak funguje princip magnetického záznamu na HDD? 
+Otázka 54 Co je GMR hlava? 
+Otázka 55 Co je stopa, sektor, cylindr? 
+Otázka 56 Co je cluster (alokační jednotka)? 
+Otázka 57 Jaké jsou hlavní parametry HDD? 
+Otázka 58 Co je S.M.A.R.T.? 
+Otázka 59 Jaký je rozdíl mezi PMR a SMR zápisem? 
+Otázka 60 Co je NCQ? 
+TÉMA 10: Grafické karty 
+Otázka 61 Co je GPU a k čemu slouží? 
+Otázka 62 Jaký je rozdíl mezi integrovanou a dedikovanou grafikou? 
+Otázka 63 Co je RAMDAC? 
+Otázka 64 Jaké jsou hlavní typy video výstupů? 
+Otázka 65 Co je Multi-GPU (SLI, CrossFireX)? 
+TÉMA 11: Zvukové karty 
+Otázka 66 Co byla první "zvuková karta" PC? 
+Otázka 67 Co přinesla Sound Blaster (1989)? 
+Otázka 68 Co je ASIO? 
+Otázka 69 Jaké jsou hlavní parametry zvukových karet? 
+Otázka 70 Co je EAX?
