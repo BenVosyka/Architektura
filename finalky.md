@@ -133,7 +133,7 @@ Dual Channel = 2 přenosové kanály. Místo jedné paměťové sběrnice spojuj
 ### Otázka 20: Co je DIMM a kolik má pinů?
 DIMM (Dual In-line Memory Module) – všechny novější paměti (SDRAM, DDR, DDR2, DDR3) jsou umístěny na modulech typu DIMM. Šířka datové sběrnice je 64 bitů. Paměťové moduly DIMM mají po stranách otvory pro zajištění v patici na základní desce. Mezi kontakty jsou otvory (klíče/zámky) uspořádané asymetricky pro zajištění správné orientace. DDR5 má 288 pinů.
 
-*(Zdroj: Polovodičové paměti.txt)*
+*(Zdroj: Paměti.txt)*
 
 ---
 
@@ -270,10 +270,14 @@ AGP (Accelerated Graphics Port) je vysokorychlostní lokální sběrnice napojen
 *(Zdroj: Sběrnice.txt)*
 
 ### Otázka 43: Co je PCMCIA a kde se používá?
-*(Odpověď nebyla nalezena v prezentacích – text byl oříznut.)*
+PCMCIA (Personal Computer Memory Card International Association) je rozšiřující slot vyskytující se především v noteboocích. Starší specifikace vycházely z architektury sběrnice ISA (16 bitů), dnes se již nepoužívají. Novější specifikace vychází z architektury sběrnice PCI (32-bitová datová sběrnice), označovaná také jako CardBus. PCMCIA karty se vyznačují podporou Plug and Play (automatická detekce a instalace vloženého periferního zařízení či rozhraní) a Hot Swap (možností vysunout/zasunout kartu za chodu).
+
+*(Zdroj: Sběrnice.txt)*
 
 ### Otázka 44: Co je ExpressCard?
-*(Odpověď nebyla nalezena v prezentacích – text byl oříznut.)*
+ExpressCard je nástupcem řešení PCMCIA. Jedná se o hardwarové spojení dvou sběrnic (rozhraní) – PCI Express a USB, přičemž zařízení může používat buď jednu, nebo obě sběrnice současně v závislosti na návrhu zařízení. Vyznačuje se vyšší datovou propustností než CardBus a podporou nových zařízení, např. TV karet pro digitální televizní vysílání (standard DVB-T). Je standardizována ve dvou formátech: ExpressCard/34 a ExpressCard/54 (číslo udává šířku karty/slotu v milimetrech). Obě varianty používají stejný 34 mm konektor – ExpressCard/34 kartu lze použít do jakéhokoli slotu, zatímco ExpressCard/54 kartu pouze do ExpressCard/54 slotu.
+
+*(Zdroj: Sběrnice.txt)*
 
 ### Otázka 45: Jaké jsou 3 lokální sběrnice?
 1. **Procesorová** – nejrychlejší sběrnice na základní desce, slouží k přenášení dat mezi procesorem a čipovou sadou (FSB, QPI, HyperTransport).
